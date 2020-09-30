@@ -1,28 +1,3 @@
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\ReChetoMiAhoracado.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\ReChetoMiAhoracado.pdb
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Business Entities.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Business Entities.pdb
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csprojAssemblyReference.cache
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csproj.CoreCompileInputs.cache
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csproj.CopyComplete
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.dll
-C:\Users\ornec\source\repos\ReChetoMiAhoracado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.pdb
-C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\ReChetoMiAhoracado.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\ReChetoMiAhoracado.pdb
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Business Entities.dll
@@ -36,3 +11,9 @@ C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAh
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csproj.CopyComplete
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.pdb
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll

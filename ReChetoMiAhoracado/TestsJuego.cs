@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Business_Entities;
+using System.Linq;
 
 namespace ReChetoMiAhoracado
 {
@@ -35,7 +36,7 @@ namespace ReChetoMiAhoracado
         public void VerificarLetraEnPalabra()
         {
             IniciaJuego('a');
-            Assert.AreEqual(Juego.PreguntaLetra() , true);
+            Assert.AreEqual(true , Juego.PreguntaLetra());
         }
 
         [TestMethod]
@@ -48,13 +49,13 @@ namespace ReChetoMiAhoracado
             ListDeLetras.Add('t');
             ListDeLetras.Add('y');
             ListDeLetras.Add('l');
-            foreach(var i in ListDeLetras)
+            foreach (var i in ListDeLetras)
             {
                 IniciaJuego(i);
                 Juego.JuegaLetra();
             }
 
-            Assert.AreEqual(Juego.CantIntentos, 5);
+            Assert.AreEqual(5, Juego.CantIntentos);
         }
 
         [TestMethod]
@@ -77,10 +78,11 @@ namespace ReChetoMiAhoracado
             letrasCorrectas.Add('s');
             letrasCorrectas.Add('l');
 
-            Assert.Equals(Juego.LetrasCorrectas.Equals(letrasCorrectas), true );
+
+            Assert.AreEqual(true, letrasCorrectas.All(Juego.LetrasCorrectas.Contains));
         }
 
-        /*[TestMethod]
+        [TestMethod]
 
         public void ControlaListaIncorrecta()
         {
@@ -95,8 +97,13 @@ namespace ReChetoMiAhoracado
                 IniciaJuego(i);
                 Juego.JuegaLetra();
             }
-            Assert.AreEqual(Juego.CantIntentos, 5);
-        }*/
+
+            List<char> letrasIncorrectas = new List<char>();
+            letrasIncorrectas.Add('t');
+            letrasIncorrectas.Add('y');
+
+            Assert.AreEqual(true, letrasIncorrectas.All(Juego.LetrasIncorrectas.Contains));
+        }
 
     }
 }

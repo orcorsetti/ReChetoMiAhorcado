@@ -14,9 +14,9 @@ namespace Business_Entities
             _cantIntentos = 7;
         }
 
-        private List<Char> letrasCorrectas;
+        private List<Char> _letrasCorrectas = new List<char>();
 
-        private List<Char> letrasIncorrectas;
+        private List<Char> _letrasIncorrectas = new List<char>();
 
         private char _letra;
 
@@ -24,14 +24,14 @@ namespace Business_Entities
 
         public char Letra { get => _letra; set => _letra = char.ToLower(value); }
         public int CantIntentos { get => _cantIntentos; set => _cantIntentos = value; }
-        public List<char> LetrasCorrectas { get => letrasCorrectas; set => letrasCorrectas = value; }
-        public List<char> LetrasIncorrectas { get => letrasIncorrectas; set => letrasIncorrectas = value; }
+        public List<char> LetrasCorrectas { get => _letrasCorrectas; set => _letrasCorrectas = value; }
+        public List<char> LetrasIncorrectas { get => _letrasIncorrectas; set => _letrasIncorrectas = value; }
 
         Palabra pal = new Palabra();
         
         public bool ControlaLetraActual()
         {
-            return char.IsLetter(char.ToLower(Letra));
+            return (char.IsLetter(char.ToLower(Letra)) & !LetrasCorrectas.Contains(Letra) & !LetrasIncorrectas.Contains(Letra));
         }
 
         public int RetornaCantLetras()
