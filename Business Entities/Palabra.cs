@@ -8,8 +8,13 @@ namespace Business_Entities
 {
     public class Palabra
     {
-        private string _PalRandom = "salero";
+        public Palabra(string Pal) 
+        { 
+            PalabraActual= Pal.ToLower();
+        }
 
-        public string PalRandom { get => _PalRandom; set => _PalRandom = value; }
+        private string _palabra;
+
+        public string PalabraActual { get => _palabra; set => _palabra = value; }
     }
 }

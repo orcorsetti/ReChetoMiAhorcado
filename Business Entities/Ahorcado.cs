@@ -14,45 +14,44 @@ namespace Business_Entities
             _cantIntentos = 7;
         }
 
+        private Palabra _pal;
+
         private List<Char> _letrasCorrectas = new List<char>();
 
         private List<Char> _letrasIncorrectas = new List<char>();
-
-        private char _letra;
 
         private int _cantIntentos;
 
         private string _nombUsuario;
 
         #region Properties
-        public char Letra { get => _letra; set => _letra = char.ToLower(value); }
         public int CantIntentos { get => _cantIntentos; set => _cantIntentos = value; }
         public List<char> LetrasCorrectas { get => _letrasCorrectas; set => _letrasCorrectas = value; }
         public List<char> LetrasIncorrectas { get => _letrasIncorrectas; set => _letrasIncorrectas = value; }
         public string NombUsuario { get => _nombUsuario; set => _nombUsuario = value; }
+        public Palabra Pal { get => _pal; set => _pal = value; }
 
         #endregion
 
-        Palabra pal = new Palabra();
-        
-        public bool ControlaLetraActual()
+
+        public bool ControlaLetraActual(char Letra)
         {
             return (char.IsLetter(char.ToLower(Letra)) & !LetrasCorrectas.Contains(Letra) & !LetrasIncorrectas.Contains(Letra));
         }
 
         public int RetornaCantLetras()
         {
-            return pal.PalRandom.Length;
+            return Pal.PalabraActual.Length;
         }
 
-        public bool PreguntaLetra()
+        public bool PreguntaLetra(char Letra)
         {
-            return pal.PalRandom.Contains(Letra);
+            return Pal.PalabraActual.Contains(Letra);
         }
 
-        public void JuegaLetra()
+        public void JuegaLetra(char Letra)
         {
-            if (PreguntaLetra())
+            if (PreguntaLetra(Letra))
             {
                 LetrasCorrectas.Add(Letra);
             }
@@ -65,12 +64,12 @@ namespace Business_Entities
 
 
         //Metodo principal, despues verlo entre los 3
-        public void Jugar()
-        {
-            while (CantIntentos != 0 )
-            {
-                JuegaLetra();
-            }
-        }
+        //public void Jugar()
+        //{
+        //    while (CantIntentos != 0 )
+        //    {
+        //        JuegaLetra(Letra);
+        //    }
+        //}
     }
 }
