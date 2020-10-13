@@ -14,6 +14,14 @@ namespace ReChetoMiAhoracado
         [TestMethod]
         public void ControlarLargoPalabra()
         {
+            //Arrange
+
+            //Act
+
+            //Assert
+
+
+
             Palabra P = new Palabra();
 
             Assert.AreEqual(P.PalRandom.Length >= 6, true);

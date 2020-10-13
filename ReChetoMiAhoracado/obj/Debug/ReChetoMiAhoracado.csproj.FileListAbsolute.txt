@@ -17,3 +17,22 @@ C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.V
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\ReChetoMiAhoracado.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\ReChetoMiAhoracado.pdb
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Business Entities.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Business Entities.pdb
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csprojAssemblyReference.cache
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csproj.CoreCompileInputs.cache
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csproj.CopyComplete
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.dll
+C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.pdb

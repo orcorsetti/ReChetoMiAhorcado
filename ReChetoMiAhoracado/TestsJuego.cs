@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Business_Entities;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace ReChetoMiAhoracado
 {
@@ -104,6 +105,90 @@ namespace ReChetoMiAhoracado
 
             Assert.AreEqual(true, letrasIncorrectas.All(Juego.LetrasIncorrectas.Contains));
         }
+
+
+        [TestMethod]
+
+        public void JugarDeNuevoDerrota()
+        {
+            //Arrange
+            Palabra pal = new Palabra();
+            pal.PalRandom = "salero";
+
+            //Act
+            List<char> ListDeLetras = new List<char>();
+            ListDeLetras.Add('v');
+            ListDeLetras.Add('x');
+            ListDeLetras.Add('t');
+            ListDeLetras.Add('y');
+            ListDeLetras.Add('w');
+            ListDeLetras.Add('q');
+            ListDeLetras.Add('m');
+            foreach (var i in ListDeLetras)
+            {
+                IniciaJuego(i);
+                Juego.JuegaLetra();
+            }
+
+            //Assert
+            Assert.AreEqual(Juego.CantIntentos, 0);
+        }
+
+
+        [TestMethod]
+        public void JugarDeNuevoGanar()
+        {
+            //Arrange
+            Palabra pal = new Palabra();
+            pal.PalRandom = "salero";
+
+            //Act
+            List<char> ListDeLetras = new List<char>();
+            ListDeLetras.Add('s');
+            ListDeLetras.Add('a');
+            ListDeLetras.Add('l');
+            ListDeLetras.Add('e');
+            ListDeLetras.Add('r');
+            ListDeLetras.Add('o');
+            foreach (var i in ListDeLetras)
+            {
+                IniciaJuego(i);
+                Juego.JuegaLetra();
+            }
+
+            //Assert
+            Assert.AreEqual(true, ListDeLetras.All(Juego.LetrasCorrectas.Contains));
+        }
+
+
+        [TestMethod]
+        public void VerificarNombre()
+        {
+            //Arrange
+            Juego.NombUsuario = "Ingrese nombre de Usuario";
+            Regex Val = new Regex(@"^[a-zA-Z]+$");
+
+            //Act
+            Juego.NombUsuario = "Pepito";
+
+            //Assert
+            Assert.IsTrue(Val.IsMatch(Juego.NombUsuario));
+        }
+
+        //[TestMethod]
+        //public void IngresaPalabraAAdivinar()
+        //{
+        //    //Arrange
+        //    Palabra pal = new Palabra();
+        //    Palabra. = "Ingrese nombre de Usuario";
+        //    Regex Val = new Regex(@"^[a-zA-Z]+$");
+
+        //    //Act
+        //    Juego.NombUsuario = "Pepito";
+
+        //    //Assert
+        //    Assert.IsTrue(Val.IsMatch(Juego.NombUsuario));
+        //}
 
     }
 }

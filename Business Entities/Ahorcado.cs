@@ -22,10 +22,16 @@ namespace Business_Entities
 
         private int _cantIntentos;
 
+        private string _nombUsuario;
+
+        #region Properties
         public char Letra { get => _letra; set => _letra = char.ToLower(value); }
         public int CantIntentos { get => _cantIntentos; set => _cantIntentos = value; }
         public List<char> LetrasCorrectas { get => _letrasCorrectas; set => _letrasCorrectas = value; }
         public List<char> LetrasIncorrectas { get => _letrasIncorrectas; set => _letrasIncorrectas = value; }
+        public string NombUsuario { get => _nombUsuario; set => _nombUsuario = value; }
+
+        #endregion
 
         Palabra pal = new Palabra();
         
@@ -54,6 +60,16 @@ namespace Business_Entities
             {
                 LetrasIncorrectas.Add(Letra);
                 CantIntentos -= 1;
+            }
+        }
+
+
+        //Metodo principal, despues verlo entre los 3
+        public void Jugar()
+        {
+            while (CantIntentos != 0 )
+            {
+                JuegaLetra();
             }
         }
     }
