@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Business_Entities
@@ -34,21 +36,31 @@ namespace Business_Entities
         #endregion
 
 
+        //Verifica que la letra sea efectivamente una letra y que no haya sido ingresada previamente
         public bool ControlaLetraActual(char Letra)
         {
             return (char.IsLetter(char.ToLower(Letra)) & !LetrasCorrectas.Contains(Letra) & !LetrasIncorrectas.Contains(Letra));
         }
 
-        public int RetornaCantLetras()
+        //Controla que texto tenga solo caracteres alfabeticos
+        public bool ControlaSoloLetras(string texto)
         {
-            return Pal.PalabraActual.Length;
+            Regex Val = new Regex(@"^[a-zA-Z]+$");
+            return Val.IsMatch(texto);
         }
 
+        //Controla que la letra pertenezca a la palabra
         public bool PreguntaLetra(char Letra)
         {
             return Pal.PalabraActual.Contains(Letra);
         }
 
+        public bool ControlaVictoria() 
+        {
+            return Pal.PalabraActual.All(LetrasCorrectas.Contains);
+        }
+
+        //Proceso de jugar una letra 
         public void JuegaLetra(char Letra)
         {
             if (PreguntaLetra(Letra))

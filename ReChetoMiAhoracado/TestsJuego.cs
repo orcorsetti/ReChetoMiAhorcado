@@ -12,7 +12,7 @@ namespace ReChetoMiAhoracado
     public class TestsJuego
     {
         [TestMethod]
-        public void ControlaLetraIngresada()
+        public void ControlaValidezLetraIngresada()
         {
             //Arrange
             Ahorcado Juego = new Ahorcado();
@@ -28,23 +28,7 @@ namespace ReChetoMiAhoracado
 
         [TestMethod]
 
-        public void ControlaCantLetrasPalabra()
-        {
-            //Arrange
-            Ahorcado Juego = new Ahorcado();
-            Palabra pal = new Palabra("salero");
-            Juego.Pal = pal;
-
-            //Act
-            int cantLetras = Juego.RetornaCantLetras();
-
-            //Assert
-            Assert.AreEqual(6, cantLetras);
-        }
-
-        [TestMethod]
-
-        public void VerificarLetraEnPalabra()
+        public void VerificarLetraPerteneceAPalabra()
         {
             //Arrange
             Ahorcado Juego = new Ahorcado();
@@ -60,7 +44,7 @@ namespace ReChetoMiAhoracado
 
         [TestMethod]
 
-        public void ControlaCantIntentos()
+        public void ControlaCantIntentosQuedan5()
         {
             //Arrange
             Ahorcado Juego = new Ahorcado();
@@ -148,34 +132,38 @@ namespace ReChetoMiAhoracado
 
         [TestMethod]
 
-        public void JugarDeNuevoDerrota()
+        public void CantidadIntetosDerrota()
         {
             //Arrange
             Ahorcado Juego = new Ahorcado();
             Palabra pal = new Palabra("salero");
             Juego.Pal = pal;
 
-            //Act
             List<char> ListDeLetras = new List<char>();
             ListDeLetras.Add('v');
             ListDeLetras.Add('x');
             ListDeLetras.Add('t');
             ListDeLetras.Add('y');
+            ListDeLetras.Add('s');
+            ListDeLetras.Add('a');
             ListDeLetras.Add('w');
             ListDeLetras.Add('q');
             ListDeLetras.Add('m');
+
+            //Act
             foreach (var i in ListDeLetras)
             {
                 Juego.JuegaLetra(i);
             }
+            bool bandera = Juego.ControlaVictoria();
 
             //Assert
-            Assert.AreEqual(Juego.CantIntentos, 0);
+            Assert.IsFalse(bandera);
         }
 
-        //Agregar setear palabra en el juego
+
         [TestMethod]
-        public void JugarDeNuevoGanar()
+        public void ControlaVictoria()
         {
             //Arrange
             Ahorcado Juego = new Ahorcado();
@@ -195,41 +183,24 @@ namespace ReChetoMiAhoracado
             {
                 Juego.JuegaLetra(i);
             }
+            bool bandera = Juego.ControlaVictoria();
 
             //Assert
-            Assert.AreEqual(true, ListDeLetras.All(Juego.LetrasCorrectas.Contains));
+            Assert.IsTrue(bandera);
         }
 
 
         [TestMethod]
-        public void VerificarNombre()
+        public void VerificarNombreUsuario()
         {
             //Arrange
             Ahorcado Juego = new Ahorcado();
-            Juego.NombUsuario = "Ingrese nombre de Usuario";
-            Regex Val = new Regex(@"^[a-zA-Z]+$");
 
             //Act
-            Juego.NombUsuario = "Pepito";
+            bool bandera = Juego.ControlaSoloLetras("Pepito");
 
             //Assert
-            Assert.IsTrue(Val.IsMatch(Juego.NombUsuario));
+            Assert.IsTrue(bandera);
         }
-
-        //[TestMethod]
-        //public void IngresaPalabraAAdivinar()
-        //{
-        //    //Arrange
-        //    Palabra pal = new Palabra();
-        //    Palabra. = "Ingrese nombre de Usuario";
-        //    Regex Val = new Regex(@"^[a-zA-Z]+$");
-
-        //    //Act
-        //    Juego.NombUsuario = "Pepito";
-
-        //    //Assert
-        //    Assert.IsTrue(Val.IsMatch(Juego.NombUsuario));
-        //}
-
     }
 }

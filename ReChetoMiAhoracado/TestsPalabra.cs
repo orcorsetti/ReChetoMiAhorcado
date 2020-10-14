@@ -9,30 +9,30 @@ namespace ReChetoMiAhoracado
     [TestClass]
     public class TestsPalabra
     {
-        Palabra P = new Palabra();
-
         [TestMethod]
         public void ControlarLargoPalabra()
         {
             //Arrange
+            Palabra P = new Palabra("Salero");
 
             //Act
+            bool bandera = P.ControlaLargoPalabra();
 
             //Assert
-
-
-
-            Palabra P = new Palabra();
-
-            Assert.AreEqual(P.PalRandom.Length >= 6, true);
+            Assert.IsTrue(bandera);
         }
 
         [TestMethod]
         public void ControlarLetraPalabra()
         {
-            Regex Val = new Regex(@"^[a-zA-Z]+$");
+            //Arrange
+            Palabra P = new Palabra("Salero");
+
+            //Act
+            bool bandera = P.ControlaSoloLetrasEnPalabra();
             
-            Assert.AreEqual(Val.IsMatch(P.PalRandom), true);
+            //Assert
+            Assert.IsTrue(bandera);
         }
     }
 }
