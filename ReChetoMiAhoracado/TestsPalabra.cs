@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Business_Entities;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Bussiness.Logic;
 
 namespace ReChetoMiAhoracado
 {
@@ -13,10 +14,10 @@ namespace ReChetoMiAhoracado
         public void ControlarLargoPalabra()
         {
             //Arrange
-            Palabra P = new Palabra("Salero");
+            PalabraLogic P = new PalabraLogic();
 
             //Act
-            bool bandera = P.ControlaLargoPalabra();
+            bool bandera = P.ControlaLargoPalabra("salero");
 
             //Assert
             Assert.IsTrue(bandera);
@@ -26,10 +27,10 @@ namespace ReChetoMiAhoracado
         public void ControlarLetraPalabra()
         {
             //Arrange
-            Palabra P = new Palabra("Salero");
+            PalabraLogic P = new PalabraLogic();
 
             //Act
-            bool bandera = P.ControlaSoloLetrasEnPalabra();
+            bool bandera = P.ControlaSoloLetrasEnPalabra("salero");
             
             //Assert
             Assert.IsTrue(bandera);

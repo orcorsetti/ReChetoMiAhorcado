@@ -36,3 +36,7 @@ C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhora
 C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csproj.CopyComplete
 C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.dll
 C:\Users\Joaco\Desktop\Facultad\Agiles\ReChetoMiAhorcado-Release1\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.pdb
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Bussiness.Logic.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Bussiness.Logic.pdb
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Data.Database.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Data.Database.pdb

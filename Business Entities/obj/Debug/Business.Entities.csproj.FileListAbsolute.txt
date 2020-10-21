@@ -1,0 +1,6 @@
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Business Entities\bin\Debug\Business Entities.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Business Entities\bin\Debug\Business Entities.pdb
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Business Entities\obj\Debug\Business.Entities.csprojAssemblyReference.cache
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Business Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Business Entities\obj\Debug\Business Entities.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Business Entities\obj\Debug\Business Entities.pdb

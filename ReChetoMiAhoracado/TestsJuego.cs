@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Business_Entities;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Bussiness.Logic;
 
 namespace ReChetoMiAhoracado
 {
@@ -15,9 +16,10 @@ namespace ReChetoMiAhoracado
         public void ControlaValidezLetraIngresada()
         {
             //Arrange
-            Ahorcado Juego = new Ahorcado();
-            Palabra pal = new Palabra("salero");
-            Juego.Pal = pal;
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
 
             //Act
             bool bandera = Juego.ControlaLetraActual('s');
@@ -28,12 +30,13 @@ namespace ReChetoMiAhoracado
 
         [TestMethod]
 
-        public void VerificarLetraPerteneceAPalabra()
+        public void VerificarLetraPerteneceAPalabraLogic()
         {
             //Arrange
-            Ahorcado Juego = new Ahorcado();
-            Palabra pal = new Palabra("salero");
-            Juego.Pal = pal;
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
 
             //Act
             bool bandera = Juego.PreguntaLetra('a');
@@ -47,9 +50,10 @@ namespace ReChetoMiAhoracado
         public void ControlaCantIntentosQuedan5()
         {
             //Arrange
-            Ahorcado Juego = new Ahorcado();
-            Palabra pal = new Palabra("salero");
-            Juego.Pal = pal;
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
 
             List<char> ListDeLetras = new List<char>();
             ListDeLetras.Add('a');
@@ -65,7 +69,7 @@ namespace ReChetoMiAhoracado
             }
 
             //Assert
-            Assert.AreEqual(5, Juego.CantIntentos);
+            Assert.AreEqual(5, Juego.Ahorcado.CantIntentos);
         }
 
         [TestMethod]
@@ -73,9 +77,10 @@ namespace ReChetoMiAhoracado
         public void ControlaListaCorrecta()
         {
             //Arrange
-            Ahorcado Juego = new Ahorcado();
-            Palabra pal = new Palabra("salero");
-            Juego.Pal = pal;
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
 
             List<char> ListDeLetras = new List<char>();
             ListDeLetras.Add('a');
@@ -94,9 +99,9 @@ namespace ReChetoMiAhoracado
             {
                 Juego.JuegaLetra(i);
             }
-            
+
             //Assert
-            Assert.IsTrue(letrasCorrectas.All(Juego.LetrasCorrectas.Contains));
+            Assert.IsTrue(letrasCorrectas.All(Juego.Ahorcado.LetrasCorrectas.Contains));
         }
 
         [TestMethod]
@@ -104,9 +109,10 @@ namespace ReChetoMiAhoracado
         public void ControlaListaIncorrecta()
         {
             //Arrange
-            Ahorcado Juego = new Ahorcado();
-            Palabra pal = new Palabra("salero");
-            Juego.Pal = pal;
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
 
             List<char> ListDeLetras = new List<char>();
             ListDeLetras.Add('a');
@@ -126,7 +132,7 @@ namespace ReChetoMiAhoracado
             }
 
             //Assert
-            Assert.IsTrue(letrasIncorrectas.All(Juego.LetrasIncorrectas.Contains));
+            Assert.IsTrue(letrasIncorrectas.All(Juego.Ahorcado.LetrasIncorrectas.Contains));
         }
 
 
@@ -135,9 +141,10 @@ namespace ReChetoMiAhoracado
         public void CantidadIntetosDerrota()
         {
             //Arrange
-            Ahorcado Juego = new Ahorcado();
-            Palabra pal = new Palabra("salero");
-            Juego.Pal = pal;
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
 
             List<char> ListDeLetras = new List<char>();
             ListDeLetras.Add('v');
@@ -166,9 +173,10 @@ namespace ReChetoMiAhoracado
         public void ControlaVictoria()
         {
             //Arrange
-            Ahorcado Juego = new Ahorcado();
-            Palabra pal = new Palabra("salero");
-            Juego.Pal = pal;
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
 
             List<char> ListDeLetras = new List<char>();
             ListDeLetras.Add('s');
@@ -177,7 +185,7 @@ namespace ReChetoMiAhoracado
             ListDeLetras.Add('e');
             ListDeLetras.Add('r');
             ListDeLetras.Add('o');
-            
+
             //Act
             foreach (var i in ListDeLetras)
             {
@@ -194,13 +202,150 @@ namespace ReChetoMiAhoracado
         public void VerificarNombreUsuario()
         {
             //Arrange
-            Ahorcado Juego = new Ahorcado();
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
 
             //Act
-            bool bandera = Juego.ControlaSoloLetras("Pepito");
+            bool bandera = Juego.ControlaSoloLetras("pepito");
 
             //Assert
             Assert.IsTrue(bandera);
+        }
+
+        [TestMethod]
+        public void CantidadPartidasGanadas()
+        {
+            //Arrange
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
+            AhorcadoLogic Juego1 = new AhorcadoLogic(a);
+            AhorcadoLogic Juego2 = new AhorcadoLogic(a);
+
+            UsuarioLogic ul = new UsuarioLogic();
+
+            List<char> ListDeLetrasGana = new List<char>();
+            ListDeLetrasGana.Add('s');
+            ListDeLetrasGana.Add('a');
+            ListDeLetrasGana.Add('l');
+            ListDeLetrasGana.Add('e');
+            ListDeLetrasGana.Add('r');
+            ListDeLetrasGana.Add('o');
+
+            List<char> ListDeLetrasGana1 = new List<char>();
+            ListDeLetrasGana1.Add('s');
+            ListDeLetrasGana1.Add('a');
+            ListDeLetrasGana1.Add('l');
+            ListDeLetrasGana1.Add('e');
+            ListDeLetrasGana1.Add('r');
+            ListDeLetrasGana1.Add('t');
+            ListDeLetrasGana1.Add('g');
+            ListDeLetrasGana1.Add('o');
+
+            List<char> ListDeLetrasPierde = new List<char>();
+            ListDeLetrasPierde.Add('v');
+            ListDeLetrasPierde.Add('x');
+            ListDeLetrasPierde.Add('t');
+            ListDeLetrasPierde.Add('y');
+            ListDeLetrasPierde.Add('s');
+            ListDeLetrasPierde.Add('a');
+            ListDeLetrasPierde.Add('w');
+            ListDeLetrasPierde.Add('q');
+            ListDeLetrasPierde.Add('m');
+
+            //Act
+            foreach (var i in ListDeLetrasGana) 
+            {
+                Juego.JuegaLetra(i);
+            }
+            Juego.ControlaVictoria();
+
+            foreach (var i in ListDeLetrasGana1)   
+            {
+                Juego1.JuegaLetra(i);
+            }
+            Juego1.ControlaVictoria();
+
+            foreach(var i in ListDeLetrasPierde) 
+            {
+                Juego2.JuegaLetra(i);
+            }
+            Juego2.ControlaVictoria();
+
+            u = ul.getOne(u.UserName);
+
+            //Assert
+            Assert.AreEqual(2, u.Wins);
+        }
+
+        [TestMethod]
+        public void CantidadPartidasPerdidas()
+        {
+            //Arrange
+            Usuario u = new Usuario();
+            Palabra p = new Palabra("salero");
+            Ahorcado a = new Ahorcado(p, u);
+            AhorcadoLogic Juego = new AhorcadoLogic(a);
+            AhorcadoLogic Juego1 = new AhorcadoLogic(a);
+            AhorcadoLogic Juego2 = new AhorcadoLogic(a);
+
+            UsuarioLogic ul = new UsuarioLogic();
+
+            List<char> ListDeLetrasGana = new List<char>();
+            ListDeLetrasGana.Add('s');
+            ListDeLetrasGana.Add('a');
+            ListDeLetrasGana.Add('l');
+            ListDeLetrasGana.Add('e');
+            ListDeLetrasGana.Add('r');
+            ListDeLetrasGana.Add('o');
+
+            List<char> ListDeLetrasGana1 = new List<char>();
+            ListDeLetrasGana1.Add('s');
+            ListDeLetrasGana1.Add('a');
+            ListDeLetrasGana1.Add('l');
+            ListDeLetrasGana1.Add('e');
+            ListDeLetrasGana1.Add('r');
+            ListDeLetrasGana1.Add('t');
+            ListDeLetrasGana1.Add('g');
+            ListDeLetrasGana1.Add('o');
+
+            List<char> ListDeLetrasPierde = new List<char>();
+            ListDeLetrasPierde.Add('v');
+            ListDeLetrasPierde.Add('x');
+            ListDeLetrasPierde.Add('t');
+            ListDeLetrasPierde.Add('y');
+            ListDeLetrasPierde.Add('s');
+            ListDeLetrasPierde.Add('a');
+            ListDeLetrasPierde.Add('w');
+            ListDeLetrasPierde.Add('q');
+            ListDeLetrasPierde.Add('m');
+
+            //Act
+            foreach (var i in ListDeLetrasGana)
+            {
+                Juego.JuegaLetra(i);
+            }
+            Juego.ControlaVictoria();
+
+            foreach (var i in ListDeLetrasGana1)
+            {
+                Juego1.JuegaLetra(i);
+            }
+            Juego1.ControlaVictoria();
+
+            foreach (var i in ListDeLetrasPierde)
+            {
+                Juego2.JuegaLetra(i);
+            }
+            Juego2.ControlaVictoria();
+
+            u = ul.getOne(u.UserName);
+
+            //Assert
+            Assert.AreEqual(1, u.Losses);
         }
     }
 }
