@@ -7,3 +7,12 @@ C:\Users\ornec\GitHub\ReChetoMiAhorcado\Data.Database\obj\Debug\Data.Database.pd
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Data.Database\bin\Debug\Business Entities.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Data.Database\bin\Debug\Business Entities.pdb
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
+D:\GitHub\ReChetoMiAhorcado\Data.Database\bin\Debug\Data.Database.dll
+D:\GitHub\ReChetoMiAhorcado\Data.Database\bin\Debug\Data.Database.pdb
+D:\GitHub\ReChetoMiAhorcado\Data.Database\bin\Debug\Business Entities.dll
+D:\GitHub\ReChetoMiAhorcado\Data.Database\bin\Debug\Business Entities.pdb
+D:\GitHub\ReChetoMiAhorcado\Data.Database\obj\Debug\Data.Database.csprojAssemblyReference.cache
+D:\GitHub\ReChetoMiAhorcado\Data.Database\obj\Debug\Data.Database.csproj.CoreCompileInputs.cache
+D:\GitHub\ReChetoMiAhorcado\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
+D:\GitHub\ReChetoMiAhorcado\Data.Database\obj\Debug\Data.Database.dll
+D:\GitHub\ReChetoMiAhorcado\Data.Database\obj\Debug\Data.Database.pdb

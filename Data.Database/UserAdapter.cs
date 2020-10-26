@@ -95,6 +95,4 @@ namespace Data.Database
         }
 
     }
-
-
 }

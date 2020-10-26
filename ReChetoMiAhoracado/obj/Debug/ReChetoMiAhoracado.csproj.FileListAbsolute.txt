@@ -40,3 +40,27 @@ C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Bussiness.L
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Bussiness.Logic.pdb
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Data.Database.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Data.Database.pdb
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\ReChetoMiAhoracado.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\ReChetoMiAhoracado.pdb
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Business Entities.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Bussiness.Logic.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Data.Database.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Business Entities.pdb
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Bussiness.Logic.pdb
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Bussiness.Logic.dll.config
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\bin\Debug\Data.Database.pdb
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csprojAssemblyReference.cache
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csproj.CoreCompileInputs.cache
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.csproj.CopyComplete
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.dll
+D:\GitHub\ReChetoMiAhorcado\ReChetoMiAhoracado\obj\Debug\ReChetoMiAhoracado.pdb
