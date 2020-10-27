@@ -13,22 +13,22 @@ namespace Data.Database
     public class UserAdapter : Adapter
     {
 
-        public Usuario GetUser(string userName) 
+        public Usuario GetUser(string username) 
         {
             Usuario usr = new Usuario();
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuario = new SqlCommand("select * from Users where userName = @username", SqlConn);
-                cmdUsuario.Parameters.Add("@username", SqlDbType.Int).Value = userName;
+                SqlCommand cmdUsuario = new SqlCommand("select * from Usuarios where UserName = @username", SqlConn);
+                cmdUsuario.Parameters.Add("@username", SqlDbType.Int).Value = username;
                 SqlDataReader drUsuario = cmdUsuario.ExecuteReader();
 
                 if (drUsuario.Read())
                 {
-                    usr.UserId = (int)drUsuario["userId"];
-                    usr.UserName = (string)drUsuario["userName"];
-                    usr.Wins = (int)drUsuario["winGames"];
-                    usr.Losses = (int)drUsuario["lostGames"];
+                    usr.UserId = (int)drUsuario["UserId"];
+                    usr.UserName = (string)drUsuario["UserName"];
+                    usr.Wins = (int)drUsuario["Wins"];
+                    usr.Losses = (int)drUsuario["Losses"];
 
                     drUsuario.Close();
                 }
@@ -52,9 +52,9 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuario = new SqlCommand("insert into Users(userName, winGames, lostGames) " +
-                                                                "values (@userName, 0, 0)", SqlConn);
-                cmdUsuario.Parameters.Add("@userName", SqlDbType.VarChar,50).Value = usr.UserName;
+                SqlCommand cmdUsuario = new SqlCommand("insert into Usuarios(UserName, Wins, Losses) " +
+                                                                "values (@username, 0, 0)", SqlConn);
+                cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar,50).Value = usr.UserName;
 
                 usr.UserId = Decimal.ToInt32((decimal)cmdUsuario.ExecuteScalar());
             }
@@ -74,12 +74,12 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuario = new SqlCommand("update Users set userName=@userName, winGames=@win, lostGames=@lost" +
-                                                                "where userId=@Id", SqlConn);
-                cmdUsuario.Parameters.Add("@Id", SqlDbType.Int).Value = usr.UserId;
-                cmdUsuario.Parameters.Add("@userName", SqlDbType.VarChar, 50).Value = usr.UserName;
+                SqlCommand cmdUsuario = new SqlCommand("update Usuarios set UserName=@username, Wins=@win, Losses=@lost" +
+                                                                "where UserId=@id", SqlConn);
+                cmdUsuario.Parameters.Add("@id", SqlDbType.Int).Value = usr.UserId;
+                cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = usr.UserName;
                 cmdUsuario.Parameters.Add("@win", SqlDbType.Int).Value = usr.Wins;
-                cmdUsuario.Parameters.Add("@losses", SqlDbType.Int).Value = usr.Losses;
+                cmdUsuario.Parameters.Add("@lost", SqlDbType.Int).Value = usr.Losses;
 
                 cmdUsuario.ExecuteNonQuery();
             }

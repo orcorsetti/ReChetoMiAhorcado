@@ -21,3 +21,15 @@ D:\GitHub\ReChetoMiAhorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.Cor
 D:\GitHub\ReChetoMiAhorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CopyComplete
 D:\GitHub\ReChetoMiAhorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.dll
 D:\GitHub\ReChetoMiAhorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.pdb
+C:\Net\TP Ahorcado\Bussiness.Logic\bin\Debug\Bussiness.Logic.dll.config
+C:\Net\TP Ahorcado\Bussiness.Logic\bin\Debug\Bussiness.Logic.dll
+C:\Net\TP Ahorcado\Bussiness.Logic\bin\Debug\Bussiness.Logic.pdb
+C:\Net\TP Ahorcado\Bussiness.Logic\bin\Debug\Business Entities.dll
+C:\Net\TP Ahorcado\Bussiness.Logic\bin\Debug\Data.Database.dll
+C:\Net\TP Ahorcado\Bussiness.Logic\bin\Debug\Business Entities.pdb
+C:\Net\TP Ahorcado\Bussiness.Logic\bin\Debug\Data.Database.pdb
+C:\Net\TP Ahorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.csprojAssemblyReference.cache
+C:\Net\TP Ahorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CoreCompileInputs.cache
+C:\Net\TP Ahorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CopyComplete
+C:\Net\TP Ahorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.dll
+C:\Net\TP Ahorcado\Bussiness.Logic\obj\Debug\Bussiness.Logic.pdb
