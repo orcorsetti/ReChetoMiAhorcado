@@ -19,7 +19,7 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: 'ReChetoMiAhoracado.sln'
+    restoreSolution: '$(solution)'
 
 - task: VSBuild@1
   inputs:
