@@ -65,6 +65,10 @@
       <Project>{2e425ace-0ebf-4715-bf93-1270e29f1027}</Project>
       <Name>Bussiness.Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Data.Database\Data.Database.csproj">
+      <Project>{c9699eeb-7cc0-4503-821b-c6a726909704}</Project>
+      <Name>Data.Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

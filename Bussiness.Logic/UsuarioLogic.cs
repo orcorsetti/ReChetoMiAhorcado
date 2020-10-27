@@ -19,6 +19,11 @@ namespace Bussiness.Logic
             UsrData = new UserAdapter();
         }
 
+        public UsuarioLogic(UserAdapter usrAdp)
+        {
+            UsrData = usrAdp;
+        }
+
         public int ActualizaCantidadesWL(Usuario usr,bool Gano)
         {
             //A desarrollar

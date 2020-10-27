@@ -6,6 +6,7 @@ using Business_Entities;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Bussiness.Logic;
+using Data.Database;
 
 namespace ReChetoMiAhoracado
 {
@@ -225,7 +226,8 @@ namespace ReChetoMiAhoracado
             AhorcadoLogic Juego1 = new AhorcadoLogic(a);
             AhorcadoLogic Juego2 = new AhorcadoLogic(a);
 
-            UsuarioLogic ul = new UsuarioLogic();
+            UserAdapter userAd = new UserAdapter();
+            UsuarioLogic ul = new UsuarioLogic(userAd);
 
             List<char> ListDeLetrasGana = new List<char>();
             ListDeLetrasGana.Add('s');
