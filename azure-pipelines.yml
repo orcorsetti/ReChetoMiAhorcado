@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/ReChetoMiAhorcado.sln'
+  solution: '**/ReChetoMiAhoracado.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
