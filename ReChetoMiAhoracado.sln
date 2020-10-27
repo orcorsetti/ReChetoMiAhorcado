@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Database", "Data.Datab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussiness.Logic", "Bussiness.Logic\Bussiness.Logic.csproj", "{2E425ACE-0EBF-4715-BF93-1270E29F1027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "..\..\Users\Joaco\Desktop\ReChetoMiAhorcado-Sprint2\Web\Web.csproj", "{A1C42242-E360-4241-870A-DF11DC3D28A6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{2E425ACE-0EBF-4715-BF93-1270E29F1027}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E425ACE-0EBF-4715-BF93-1270E29F1027}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E425ACE-0EBF-4715-BF93-1270E29F1027}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1C42242-E360-4241-870A-DF11DC3D28A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1C42242-E360-4241-870A-DF11DC3D28A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1C42242-E360-4241-870A-DF11DC3D28A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1C42242-E360-4241-870A-DF11DC3D28A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
