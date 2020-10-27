@@ -20,7 +20,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdUsuario = new SqlCommand("select * from Usuarios where UserName = @username", SqlConn);
-                cmdUsuario.Parameters.Add("@username", SqlDbType.Int).Value = username;
+                cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = username;
                 SqlDataReader drUsuario = cmdUsuario.ExecuteReader();
 
                 if (drUsuario.Read())
@@ -47,52 +47,52 @@ namespace Data.Database
             }
         }
 
-        public void InsertUser(Usuario usr) 
-        {
-            try
-            {
-                this.OpenConnection();
-                SqlCommand cmdUsuario = new SqlCommand("insert into Usuarios(UserName, Wins, Losses) " +
-                                                                "values (@username, 0, 0)", SqlConn);
-                cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar,50).Value = usr.UserName;
+        //public void InsertUser(Usuario usr) 
+        //{
+        //    try
+        //    {
+        //        this.OpenConnection();
+        //        SqlCommand cmdUsuario = new SqlCommand("insert into Usuarios(UserName, Wins, Losses) " +
+        //                                                        "values (@username, 0, 0)", SqlConn);
+        //        cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar,50).Value = usr.UserName;
 
-                usr.UserId = Decimal.ToInt32((decimal)cmdUsuario.ExecuteScalar());
-            }
-            catch (Exception Ex)
-            {
-                Exception exception = new Exception("Error al insertar el usuario "+usr.UserName, Ex);
-                throw exception;
-            }
-            finally
-            {
-                this.CloseConnection();
-            }
-        }
+        //        usr.UserId = Decimal.ToInt32((decimal)cmdUsuario.ExecuteScalar());
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        Exception exception = new Exception("Error al insertar el usuario "+usr.UserName, Ex);
+        //        throw exception;
+        //    }
+        //    finally
+        //    {
+        //        this.CloseConnection();
+        //    }
+        //}
 
-        public void UpdateUser(Usuario usr)
-        {
-            try
-            {
-                this.OpenConnection();
-                SqlCommand cmdUsuario = new SqlCommand("update Usuarios set UserName=@username, Wins=@win, Losses=@lost" +
-                                                                "where UserId=@id", SqlConn);
-                cmdUsuario.Parameters.Add("@id", SqlDbType.Int).Value = usr.UserId;
-                cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = usr.UserName;
-                cmdUsuario.Parameters.Add("@win", SqlDbType.Int).Value = usr.Wins;
-                cmdUsuario.Parameters.Add("@lost", SqlDbType.Int).Value = usr.Losses;
+        //public void UpdateUser(Usuario usr)
+        //{
+        //    try
+        //    {
+        //        this.OpenConnection();
+        //        SqlCommand cmdUsuario = new SqlCommand("update Usuarios set UserName=@username, Wins=@win, Losses=@lost" +
+        //                                                        "where UserId=@id", SqlConn);
+        //        cmdUsuario.Parameters.Add("@id", SqlDbType.Int).Value = usr.UserId;
+        //        cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = usr.UserName;
+        //        cmdUsuario.Parameters.Add("@win", SqlDbType.Int).Value = usr.Wins;
+        //        cmdUsuario.Parameters.Add("@lost", SqlDbType.Int).Value = usr.Losses;
 
-                cmdUsuario.ExecuteNonQuery();
-            }
-            catch (Exception Ex)
-            {
-                Exception exception = new Exception("Error al actualizar el usuario "+usr.UserName, Ex);
-                throw exception;
-            }
-            finally
-            {
-                this.CloseConnection();
-            }
-        }
+        //        cmdUsuario.ExecuteNonQuery();
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        Exception exception = new Exception("Error al actualizar el usuario "+usr.UserName, Ex);
+        //        throw exception;
+        //    }
+        //    finally
+        //    {
+        //        this.CloseConnection();
+        //    }
+        //}
 
     }
 }
