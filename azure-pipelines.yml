@@ -30,16 +30,6 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Dotnet Publish'
-  inputs:
-    command: publish
-    publishWebProjects: false
-    projects: '**/ReChetoMiAhoracado/*.csproj'
-    arguments: '-o testpath'
-    zipAfterPublish: false
-    modifyOutputPath: true
-
-- task: DotNetCoreCLI@2
   inputs:
     command: test
     projects: '**/ReChetoMiAhoracado/*.csproj'
@@ -47,4 +37,8 @@ steps:
     #nobuild: true
   displayName: 'Tests'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
 
