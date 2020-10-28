@@ -11,7 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Database", "Data.Datab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussiness.Logic", "Bussiness.Logic\Bussiness.Logic.csproj", "{2E425ACE-0EBF-4715-BF93-1270E29F1027}"
 EndProject
-<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{CE3EAB19-BB7D-4417-826A-9710150FE293}"
 EndProject
 =======
