@@ -5,6 +5,7 @@
 
 trigger:
 - master
+- feature/*
 
 pool:
   vmImage: 'windows-latest'
@@ -28,7 +29,10 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
+- task: DotNetCoreCLI@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: test
+    projects: '**/ReChetoMiAhoracado/*.csproj'
+    arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+    nobuild: true
+  displayName: 'Tests'
