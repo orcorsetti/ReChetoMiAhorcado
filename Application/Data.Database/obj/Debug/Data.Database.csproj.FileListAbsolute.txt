@@ -25,3 +25,12 @@ C:\Net\TP Ahorcado\Data.Database\obj\Debug\Data.Database.csproj.CoreCompileInput
 C:\Net\TP Ahorcado\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
 C:\Net\TP Ahorcado\Data.Database\obj\Debug\Data.Database.dll
 C:\Net\TP Ahorcado\Data.Database\obj\Debug\Data.Database.pdb
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\bin\Debug\Data.Database.dll
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\bin\Debug\Data.Database.pdb
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\bin\Debug\Business Entities.dll
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\bin\Debug\Business Entities.pdb
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data.Database.csprojAssemblyReference.cache
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data.Database.csproj.CoreCompileInputs.cache
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data.Database.dll
+D:\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data.Database.pdb
