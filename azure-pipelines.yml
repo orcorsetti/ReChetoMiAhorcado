@@ -45,7 +45,7 @@ steps:
     searchFolder: 'Application/ReChetoMiAhoracado/'
     runOnlyImpactedTests: false
     vsTestVersion: '16.0'
-    runSettingsFile: 'Application/ReChetoMiAhoracado/*.config'
+    runSettingsFile: 'Application/ReChetoMiAhoracado/packages.config'
     codeCoverageEnabled: false
   displayName: 'Tests'
 
