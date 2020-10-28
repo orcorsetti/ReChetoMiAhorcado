@@ -42,10 +42,10 @@ steps:
       **\*test*.dll
       !**\*TestAdapter.dll
       !**\obj\**
-    searchFolder: '**/ReChetoMiAhoracado/'
+    searchFolder: 'Application/ReChetoMiAhoracado/'
     runOnlyImpactedTests: false
     vsTestVersion: '16.0'
-    runSettingsFile: '**/ReChetoMiAhoracado/*.config'
+    runSettingsFile: 'Application/ReChetoMiAhoracado/*.config'
     codeCoverageEnabled: false
   displayName: 'Tests'
 
