@@ -29,16 +29,24 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: test
+#    projects: '**/ReChetoMiAhoracado/*.csproj'
+#    arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+#    nobuild: true
+- task: VSTest@2
   inputs:
-    command: test
-    projects: '**/ReChetoMiAhoracado/*.csproj'
-    arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
-    #nobuild: true
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '**/ReChetoMiAhoracado/'
+    runOnlyImpactedTests: false
+    vsTestVersion: '16.0'
+    runSettingsFile: '**/ReChetoMiAhorcado/*.config'
+    codeCoverageEnabled: false
   displayName: 'Tests'
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
 
