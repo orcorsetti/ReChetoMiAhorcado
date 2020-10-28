@@ -36,3 +36,13 @@ steps:
     arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
     #nobuild: true
   displayName: 'Tests'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish'
+  inputs:
+    command: publish
+    publishWebProjects: false
+    projects: '**/ReChetoMiAhoracado/*.csproj'
+    arguments: '-o testpath'
+    zipAfterPublish: false
+    modifyOutputPath: true
