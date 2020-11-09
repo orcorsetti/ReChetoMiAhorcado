@@ -43,6 +43,7 @@ steps:
       **\*test*.dll
       !**\*TestAdapter.dll
       !**\obj\**
+      **\ReChetoMiAhoracado.dll
     searchFolder: 'Application/ReChetoMiAhoracado/'
     runOnlyImpactedTests: false
     vsTestVersion: '16.0'
