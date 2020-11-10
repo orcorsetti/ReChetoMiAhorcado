@@ -29,22 +29,31 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
-  displayName: 'Dotnet Publish'
-  inputs:
-    command: publish
-    publishWebProjects: false
-    projects: '**/ReChetoMiAhoracado/*.csproj'
-    arguments: '-o testpath'
-    zipAfterPublish: false
-    modifyOutputPath: true
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: test
+#    projects: '**/ReChetoMiAhoracado/*.csproj'
+#    arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+#    nobuild: true
 
-- task: DotNetCoreCLI@2
+- task: VSTest@2
   inputs:
-    command: test
-    projects: '**/ReChetoMiAhoracado/*.csproj'
-    arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
-    #nobuild: true
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+      **\ReChetoMiAhoracado.dll
+    searchFolder: 'Application/ReChetoMiAhoracado/'
+    runOnlyImpactedTests: false
+    vsTestVersion: '16.0'
+    codeCoverageEnabled: true
   displayName: 'Tests'
 
 
+
+#- task: PublishCodeCoverageResults@1
+#  inputs:
+#    codeCoverageTool: 'Cobertura'
+#    summaryFileLocation: '**coverage.cobertura.xml'
+#    reportDirectory: '$(system.defaultworkingdirectory)\reports'
