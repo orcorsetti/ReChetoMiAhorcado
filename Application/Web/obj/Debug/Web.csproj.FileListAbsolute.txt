@@ -130,3 +130,8 @@ D:\GitHub\ReChetoMiAhorcado\Application\Web\obj\Debug\Web.csproj.CoreCompileInpu
 D:\GitHub\ReChetoMiAhorcado\Application\Web\obj\Debug\Web.csproj.CopyComplete
 D:\GitHub\ReChetoMiAhorcado\Application\Web\obj\Debug\Web.dll
 D:\GitHub\ReChetoMiAhorcado\Application\Web\obj\Debug\Web.pdb
+D:\GitHub\ReChetoMiAhorcado\Application\Web\bin\nunit.framework.dll
+D:\GitHub\ReChetoMiAhorcado\Application\Web\bin\WebDriver.dll
+D:\GitHub\ReChetoMiAhorcado\Application\Web\bin\nunit.framework.pdb
+D:\GitHub\ReChetoMiAhorcado\Application\Web\bin\nunit.framework.xml
+D:\GitHub\ReChetoMiAhorcado\Application\Web\bin\WebDriver.xml

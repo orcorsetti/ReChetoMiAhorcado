@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussiness.Logic", "Bussines
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{CE3EAB19-BB7D-4417-826A-9710150FE293}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.AcceptanceTest", "Test.AcceptanceTest\Test.AcceptanceTest.csproj", "{9CDC9FDE-5D87-4AD6-909A-74B51A6842A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CE3EAB19-BB7D-4417-826A-9710150FE293}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE3EAB19-BB7D-4417-826A-9710150FE293}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE3EAB19-BB7D-4417-826A-9710150FE293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDC9FDE-5D87-4AD6-909A-74B51A6842A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDC9FDE-5D87-4AD6-909A-74B51A6842A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDC9FDE-5D87-4AD6-909A-74B51A6842A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDC9FDE-5D87-4AD6-909A-74B51A6842A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
