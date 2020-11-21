@@ -5,6 +5,8 @@
 
 @mytag
 Scenario: User anter a correct letter
-	Given the user enter a correct letter "s"
+	Given the user enter the username "orcorsetti" and click login
+	And the user click to start a new game
+	And the user enter a correct letter "s"
 	When the user clicked the play button
 	Then the game show the letter "s" where it belongs
