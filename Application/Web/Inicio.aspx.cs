@@ -15,14 +15,5 @@ namespace Web
         {
 
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Usuario usr = new Usuario();
-            UsuarioLogic ul = new UsuarioLogic();
-            usr = ul.getOne("JoacoRomero");
-            this.lbl1.Text = String.Format("Usuario: " + usr.UserName);
-            this.lbl2.Text = string.Format("Cantidad ganadas: " + Convert.ToString(usr.Wins));
-        }
     }
 }

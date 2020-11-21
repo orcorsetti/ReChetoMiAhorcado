@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Web.Inicio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Web.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -10,8 +10,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="txtBoxUserName" runat="server"></asp:TextBox>
-            <asp:Button ID="btnLogin" runat="server" Text="Ingresar" />
         </div>
     </form>
 </body>

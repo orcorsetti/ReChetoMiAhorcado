@@ -89,13 +89,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Steps\LoginSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\PalabraCorrectaSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Feature\Login.feature" />
+    <None Include="Feature\PalabraCorrecta.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
