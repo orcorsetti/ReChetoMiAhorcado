@@ -23,13 +23,8 @@ namespace Web
                 Ahorcado ah = new Ahorcado(pal, usr);
                 Session["Juego"] = new AhorcadoLogic(ah);
             }
-            else
-            {
-                ahlogic = (AhorcadoLogic)Session["Juego"];
-                this.lblIncorrectLetter.Text = Convert.ToString(ahlogic.Ahorcado.LetrasIncorrectas.Count);
-            }
             ahlogic = (AhorcadoLogic)Session["Juego"];
-            esconderLabels(ahlogic.Ahorcado.Palabra.PalabraActual);
+            generarLabelsLetras(ahlogic.Ahorcado);
             actualizarJuego();
 
         }
@@ -43,19 +38,36 @@ namespace Web
                 {
                     letrasinc = letrasinc + c + ", ";
                 }
-                //lblIncorrectLetter.Text = letrasinc;
+                lblIncorrectLetter.Text = letrasinc;
+
+                lblRemainingAttempts.Text = ahlogic.Ahorcado.CantIntentos.ToString();
+            }
+            if(ahlogic.Ahorcado.LetrasCorrectas.Count > 0)
+            {
+                generarLabelsLetras(ahlogic.Ahorcado);
             }
         }
 
-        private void esconderLabels(string palabra)
+        private void generarLabelsLetras(Ahorcado ahorcado)
         {
-            int largo = palabra.Length;
-            for (int i = 1; i <= palabra.Length; i++)
+            phLetters.Controls.Clear();
+
+            int largo = ahorcado.Palabra.PalabraActual.Length;
+            for (int i = 0; i < largo; i++)
             {
                 Label label = new Label();
                 label.ID = "lblLetter" + i.ToString();
-                label.Text = "L" + i.ToString();
+                if (ahorcado.LetrasCorrectas.Contains(ahorcado.Palabra.PalabraActual[i]))
+                {
+                    label.Text = ahorcado.Palabra.PalabraActual[i].ToString()+" ";
+                }
+                else
+                {
+                    label.Text = "_ ";
+                }
+
                 phLetters.Controls.Add(label);
+                
             }
         }
 
@@ -68,9 +80,51 @@ namespace Web
                 {
                     ahlogic.JuegaLetra(Convert.ToChar(l));
                     Session["Juego"] = ahlogic;
-                    Response.Redirect("NewGame.aspx");
+
+                    System.Diagnostics.Debug.WriteLine(ahlogic.Ahorcado.LetrasIncorrectas.Count);
+
+                    actualizarJuego();
+
+                    txtBoxLetter.Text = "";
+
+                    if (ahlogic.PreguntaLetra(Convert.ToChar(l)))
+                    {
+                        if (ahlogic.ControlaVictoria())
+                        {
+                            int cantInt = ahlogic.Ahorcado.LetrasCorrectas.Count + ahlogic.Ahorcado.LetrasIncorrectas.Count;
+
+                            txtBoxLetter.ReadOnly = true;
+                            btnPlayLetter.Enabled = false;
+                            lblGameResult.Text = "Felicidades! Ganó en "+cantInt+" intentos!";
+                            lblGameResult.Visible = true;
+                            btnReturn.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        if (ahlogic.ControlaDerrota())
+                        {
+                            txtBoxLetter.ReadOnly = true;
+                            btnPlayLetter.Enabled = false;
+                            lblGameResult.Text = "Casi Casi! Perdió el Juego, intente nuevamente.";
+                            lblGameResult.Visible = true;
+                            btnReturn.Visible = true;
+                        }
+                    }
                 }
+                else
+                {
+                    Response.Write("<script language=javascript>alert('Ingrese una letra que no haya utilizado previamente.')</script>");
+                }
+            } else 
+            {
+                Response.Write("<script language=javascript>alert('Debe ingresar una letra.')</script>");
             }
+        }
+
+        protected void btnReturn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Menu.aspx");
         }
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.dll.config
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.pdb
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\bin\Debug\Business Entities.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\bin\Debug\Data.Database.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\bin\Debug\Business Entities.pdb
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\bin\Debug\Data.Database.pdb
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csprojAssemblyReference.cache
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CoreCompileInputs.cache
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CopyComplete
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.dll
+C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.pdb

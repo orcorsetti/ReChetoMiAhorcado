@@ -163,10 +163,10 @@ namespace ReChetoMiAhoracado
             {
                 Juego.JuegaLetra(i);
             }
-            bool bandera = Juego.ControlaVictoria();
+            bool bandera = Juego.Ahorcado.CantIntentos == 0;
 
             //Assert
-            Assert.IsFalse(bandera);
+            Assert.IsTrue(bandera);
         }
 
 
@@ -192,7 +192,7 @@ namespace ReChetoMiAhoracado
             {
                 Juego.JuegaLetra(i);
             }
-            bool bandera = Juego.ControlaVictoria();
+            bool bandera = Juego.Ahorcado.Palabra.PalabraActual.All(Juego.Ahorcado.LetrasCorrectas.Contains);
 
             //Assert
             Assert.IsTrue(bandera);

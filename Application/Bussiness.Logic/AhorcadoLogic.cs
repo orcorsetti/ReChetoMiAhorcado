@@ -44,17 +44,26 @@ namespace Bussiness.Logic
             UsuarioLogic ul = new UsuarioLogic();
 
 
-            //Hay que ver que se hace
+            //Hay que ver que si gano
             if( Ahorcado.Palabra.PalabraActual.All(Ahorcado.LetrasCorrectas.Contains)== true)   
             {
-                ul.ActualizaCantidadesWL(Ahorcado.Usuario,true);
-            } else 
-            {
-                ul.ActualizaCantidadesWL(Ahorcado.Usuario,false);
+               Ahorcado.Usuario = ul.ActualizaCantidadesWL(Ahorcado.Usuario,true);
             }
 
-
             return Ahorcado.Palabra.PalabraActual.All(Ahorcado.LetrasCorrectas.Contains);
+        }
+
+        public bool ControlaDerrota()
+        {
+            UsuarioLogic ul = new UsuarioLogic();
+
+            //Hay que ver que si perdió
+            if (Ahorcado.CantIntentos == 0)
+            {
+               Ahorcado.Usuario = ul.ActualizaCantidadesWL(Ahorcado.Usuario, false);
+            }
+
+            return Ahorcado.CantIntentos == 0;
         }
 
         //Proceso de jugar una letra 

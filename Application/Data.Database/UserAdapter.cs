@@ -69,30 +69,30 @@ namespace Data.Database
         //    }
         //}
 
-        //public void UpdateUser(Usuario usr)
-        //{
-        //    try
-        //    {
-        //        this.OpenConnection();
-        //        SqlCommand cmdUsuario = new SqlCommand("update Usuarios set UserName=@username, Wins=@win, Losses=@lost" +
-        //                                                        "where UserId=@id", SqlConn);
-        //        cmdUsuario.Parameters.Add("@id", SqlDbType.Int).Value = usr.UserId;
-        //        cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = usr.UserName;
-        //        cmdUsuario.Parameters.Add("@win", SqlDbType.Int).Value = usr.Wins;
-        //        cmdUsuario.Parameters.Add("@lost", SqlDbType.Int).Value = usr.Losses;
+        public void UpdateUser(Usuario usr)
+        {
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdUsuario = new SqlCommand("update Usuarios set UserName = @username, Wins = @win, Losses = @lost" +
+                                                                "where UserId = @id", SqlConn);
+                cmdUsuario.Parameters.Add("@id", SqlDbType.Int).Value = usr.UserId;
+                cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = usr.UserName;
+                cmdUsuario.Parameters.Add("@win", SqlDbType.Int).Value = usr.Wins;
+                cmdUsuario.Parameters.Add("@lost", SqlDbType.Int).Value = usr.Losses;
 
-        //        cmdUsuario.ExecuteNonQuery();
-        //    }
-        //    catch (Exception Ex)
-        //    {
-        //        Exception exception = new Exception("Error al actualizar el usuario "+usr.UserName, Ex);
-        //        throw exception;
-        //    }
-        //    finally
-        //    {
-        //        this.CloseConnection();
-        //    }
-        //}
+                cmdUsuario.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+                Exception exception = new Exception("Error al actualizar el usuario " + usr.UserName, Ex);
+                throw exception;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
 
     }
 }

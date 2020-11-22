@@ -23,15 +23,13 @@
         </div>
 
         <div>
-            <br /> <br /> 
+            <br /> 
             <asp:PlaceHolder ID="phLetters" runat="server"></asp:PlaceHolder>
             <br />
 
             <br />
             <asp:Label ID="lblGameResult" runat="server" Text="Oculto" Visible="false"></asp:Label>
-            
-            
-
+            <asp:Button ID="btnReturn" runat="server" Text="Return to Menu" Visible ="false" OnClick="btnReturn_Click"/>
         </div>
 
     </form>

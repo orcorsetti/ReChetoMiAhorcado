@@ -24,10 +24,19 @@ namespace Bussiness.Logic
             UsrData = usrAdp;
         }
 
-        public int ActualizaCantidadesWL(Usuario usr,bool Gano)
+        public Usuario ActualizaCantidadesWL(Usuario usr,bool Gano)
         {
-            //A desarrollar
-            return 2;
+            if (Gano)
+            {
+                usr.Wins += 1;
+            }
+            else
+            {
+                usr.Losses += 1;
+            }
+            UsrData.UpdateUser(usr);
+
+            return usr;
         }
 
         public Usuario getOne(string username) 
