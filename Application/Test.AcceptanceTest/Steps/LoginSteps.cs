@@ -33,6 +33,8 @@ namespace Test.AcceptanceTest.Steps
         {
             IWebElement btnLogin = WebDriver.FindElement(By.Id("btnLogin"));
             btnLogin.Click();
+
+            WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
 
         [Then(@"the main menu of the app is loaded with the username ""(.*)""")]

@@ -89,14 +89,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Steps\GanaJuegoSteps.cs" />
     <Compile Include="Steps\IngresaLetraCorrectaSteps.cs" />
+    <Compile Include="Steps\IngresaLetraIncorrectaSteps.cs" />
     <Compile Include="Steps\LoginSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\PierdeJuegoSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Feature\GanaJuego.feature" />
     <None Include="Feature\IngresaLetraCorrecta.feature" />
+    <None Include="Feature\IngresaLetraIncorrecta.feature" />
     <None Include="Feature\Login.feature" />
+    <None Include="Feature\PierdeJuego.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

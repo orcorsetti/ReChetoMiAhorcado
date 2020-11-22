@@ -4,7 +4,7 @@
 	I want to enter a letter and see if its correct
 
 @mytag
-Scenario: User anter a correct letter
+Scenario: User enter a correct letter
 	Given the user enter the username "orcorsetti" and click login
 	And the user click to start a new game
 	And the user enter a correct letter "s"

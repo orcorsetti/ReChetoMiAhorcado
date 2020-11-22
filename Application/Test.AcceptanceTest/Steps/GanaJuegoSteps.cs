@@ -7,12 +7,12 @@ using TechTalk.SpecFlow;
 namespace Test.AcceptanceTest.Steps
 {
     [Binding]
-    public class LetraCorrectaSteps
+    public class GanaJuegoSteps
     {
         public IWebDriver WebDriver => new ChromeDriver();
 
-        [Given(@"the user enter the username ""(.*)"" and click login")]
-        public void GivenTheUserEnterTheUsernameAndClickLogin(string p0)
+        [Given(@"the user enter her UserName ""(.*)"" and click the Login button")]
+        public void GivenTheUserEnterHerUserNameAndClickTheLoginButton(string p0)
         {
             WebDriver.Navigate().GoToUrl("https://localhost:44336/");
 
@@ -21,10 +21,12 @@ namespace Test.AcceptanceTest.Steps
 
             txtBoxUserName.SendKeys(p0);
             btnLogin.Click();
-        }
 
-        [Given(@"the user click to start a new game")]
-        public void GivenTheUserClickToStartANewGame()
+            WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+        }
+        
+        [Given(@"the user starts the game")]
+        public void GivenTheUserStartsTheGame()
         {
             IWebElement btnStartGame = WebDriver.FindElement(By.Id("btnStartGame"));
 
@@ -32,29 +34,30 @@ namespace Test.AcceptanceTest.Steps
 
             WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
-
-        [Given(@"the user enter a correct letter ""(.*)""")]
-        public void GivenTheUserEnterACorrectLetter(string p0)
+        
+        [Given(@"the user plays the correct letters")]
+        public void GivenTheUserPlaysTheCorrectLetters(Table table)
         {
             IWebElement txtBoxLetter = WebDriver.FindElement(By.Id("txtBoxLetter"));
-            txtBoxLetter.SendKeys(p0);
-        }
-
-        [When(@"the user clicked the play button")]
-        public void WhenTheUserClickedThePlayButton()
-        {
             IWebElement btnPlayLetter = WebDriver.FindElement(By.Id("btnPlayLetter"));
-            btnPlayLetter.Click();
+
+            foreach( var row in table.Rows)
+            {
+                txtBoxLetter.SendKeys(row[0]);
+                btnPlayLetter.Click();
+
+                WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            }
 
             WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
-
-        [Then(@"the game show the letter ""(.*)"" where it belongs")]
-        public void ThenTheGameShowTheLetterWhereItBelongs(string p0)
+        
+        [Then(@"the user wins the game and the game congratulates her")]
+        public void ThenTheUserWinsTheGameAndTheGameCongratulatesHer()
         {
-            string lblLetter1 = WebDriver.FindElement(By.Id("lblLetter1")).Text;
+            string lblGameResult = WebDriver.FindElement(By.Id("lblGameResult")).Text;
 
-            Assert.AreEqual(p0, lblLetter1);
+            Assert.AreEqual("Felicidades! Ganó en 6 intentos!", lblGameResult);
         }
     }
 }
