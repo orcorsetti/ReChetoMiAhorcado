@@ -15,5 +15,21 @@ namespace Web
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Usuario usr = new Usuario();
+            UsuarioLogic ulogic = new UsuarioLogic();
+            usr = ulogic.getOne(txtBoxUserName.Text);
+            if(usr.UserName != null)
+            {
+                Session["usuario"] = usr;
+                Response.Redirect("Menu.aspx");
+            }
+            else
+            {
+                Response.Redirect("Inicio.aspx");
+            }
+        }
     }
 }

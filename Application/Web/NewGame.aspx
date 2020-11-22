@@ -1,0 +1,39 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewGame.aspx.cs" Inherits="Web.NewGame" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:TextBox ID="txtBoxLetter" runat="server" MaxLength="1" Width="40px"></asp:TextBox>
+            <asp:Button ID="btnPlayLetter" runat="server" Text="Play Letter!" OnClick="btnPlayLetter_Click" />
+        </div>
+        <div>
+            <asp:Label ID="lblWrongLetter" runat="server" Text="Wrong Letters: "></asp:Label>
+             <asp:Label ID="lblIncorrectLetter" runat="server"></asp:Label>
+            <br />
+            <asp:Label ID="RemainingAttempts" runat="server" Text="Remaining Attempts: "></asp:Label>
+            <asp:Label ID="lblRemainingAttempts" runat="server"></asp:Label>
+
+        </div>
+
+        <div>
+            <br /> <br /> 
+            <asp:PlaceHolder ID="phLetters" runat="server"></asp:PlaceHolder>
+            <br />
+
+            <br />
+            <asp:Label ID="lblGameResult" runat="server" Text="Oculto" Visible="false"></asp:Label>
+            
+            
+
+        </div>
+
+    </form>
+</body>
+</html>

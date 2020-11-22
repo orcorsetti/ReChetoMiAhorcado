@@ -16,7 +16,7 @@ namespace Test.AcceptanceTest.Steps
         [Given(@"the user enter the application")]
         public void GivenTheUserEnterTheApplication()
         {
-            WebDriver.Navigate().GoToUrl("https://localhost:44336/");
+            WebDriver.Navigate().GoToUrl("https://localhost:44336/Inicio.aspx");
         }
 
         [Given(@"he enter her username ""(.*)""")]
