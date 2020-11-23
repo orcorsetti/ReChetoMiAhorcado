@@ -87,6 +87,15 @@ namespace Web
         protected global::System.Web.UI.WebControls.PlaceHolder phLetters;
 
         /// <summary>
+        /// Control lblWord.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblWord;
+
+        /// <summary>
         /// Control lblGameResult.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGameResult;
+
+        /// <summary>
+        /// Control btnTryAgain.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnTryAgain;
 
         /// <summary>
         /// Control btnReturn.

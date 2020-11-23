@@ -18,7 +18,7 @@ namespace Web
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Usuario usr = new Usuario();
+            Usuario usr;
             UsuarioLogic ulogic = new UsuarioLogic();
             usr = ulogic.getOne(txtBoxUserName.Text);
             if(usr.UserName != null)

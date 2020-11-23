@@ -28,7 +28,11 @@
             <br />
 
             <br />
+            <asp:Label ID="lblWord" runat="server" Visible="false"></asp:Label>
+            <br />
             <asp:Label ID="lblGameResult" runat="server" Text="Oculto" Visible="false"></asp:Label>
+            <br />
+            <asp:Button ID="btnTryAgain" runat="server" Text="Try Again" Visible ="false" OnClick="btnTryAgain_Click"/>
             <asp:Button ID="btnReturn" runat="server" Text="Return to Menu" Visible ="false" OnClick="btnReturn_Click"/>
         </div>
 

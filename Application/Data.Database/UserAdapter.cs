@@ -106,8 +106,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuario = new SqlCommand("update Usuarios set UserName = @username, Wins = @win, Losses = @lost" +
-                                                                "where UserId = @id", SqlConn);
+                SqlCommand cmdUsuario = new SqlCommand("update Usuarios set UserName = @username, Wins = @win, Losses = @lost where UserId = @id", SqlConn);
                 cmdUsuario.Parameters.Add("@id", SqlDbType.Int).Value = usr.UserId;
                 cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = usr.UserName;
                 cmdUsuario.Parameters.Add("@win", SqlDbType.Int).Value = usr.Wins;

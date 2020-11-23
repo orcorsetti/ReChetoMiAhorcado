@@ -106,8 +106,11 @@ namespace Web
                         {
                             txtBoxLetter.ReadOnly = true;
                             btnPlayLetter.Enabled = false;
+                            lblWord.Text = "La palabra era " + ahlogic.Ahorcado.Palabra.PalabraActual;
+                            lblWord.Visible = true;
                             lblGameResult.Text = "Casi Casi! Perdió el Juego, intente nuevamente.";
                             lblGameResult.Visible = true;
+                            btnTryAgain.Visible = true;
                             btnReturn.Visible = true;
                         }
                     }
@@ -125,6 +128,11 @@ namespace Web
         protected void btnReturn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Menu.aspx");
+        }
+
+        protected void btnTryAgain_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("NewGame.aspx");
         }
     }
 }
