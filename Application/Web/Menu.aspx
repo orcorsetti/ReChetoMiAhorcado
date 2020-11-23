@@ -10,18 +10,50 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
-            <asp:LinkButton ID="lnkSalir" runat="server" OnClick="lnkSalir_Click">Cerrar Sesión</asp:LinkButton>
+        <nav class="navbar navbar-dark bg-secondary">
+            <div class="container">
+                <div class="col-9">
+                  <a class="navbar-brand" href="#">
+                    <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Ahorcado
+                  </a>
+                </div>
+            <div class="col-1">
+                <asp:Label ID="lblUserName" runat="server" CssClass="text-white" Text="Label"></asp:Label>
+            </div>
+            <div class="col-2">
+                <asp:LinkButton ID="lnkSalir" runat="server" CssClass="nav-link text-white " OnClick="lnkSalir_Click">Cerrar Sesión</asp:LinkButton>
+            </div>
+            </div>
+        </nav>
+        <div class="container">
+        <div class="row justify-content-center p-4">
+        <div class="card col-4">
+            <div class="card-body"></div>
+            <h5 class="card-title">Menu</h5>
+            <asp:Button ID="btnStartGame" runat="server" CssClass="btn btn-primary btn-lg btn-block p-1" Text="New Game" OnClick="btnStartGame_Click" />
+            <asp:Button ID="btnRanking" runat="server" CssClass="btn btn-primary btn-lg btn-block p-1" Text="Top Ranking" OnClick="btnRanking_Click" />
             <br />
-            <br />
-            <asp:Button ID="btnStartGame" runat="server" Text="New Game" OnClick="btnStartGame_Click" />
-            <br />
-            <asp:Button ID="btnRanking" runat="server" Text="Top Ranking" OnClick="btnRanking_Click" />
-            <br />
-
+        </div>
         </div>
 
+    </div>
+
+    <footer class="navbar fixed-bottom navbar-dark bg-secondary">
+        <div class="container">
+            <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
+                <div class="card text-white bg-secondary" style="width: 18rem;">
+                <div class="card-header bg-info">
+                        Integrantes
+                    </div>
+                    <ul class="list-group list-group-flush bg-secondary">
+                        <li class="list-group-item bg-secondary">Romero, Joaquin      Legajo: 43740</li>
+                        <li class="list-group-item bg-secondary">Corsetti, Ornela     Legajo: 44034</li>
+                        <li class="list-group-item bg-secondary">Mateo, Lara          Legajo: xxxxx</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>

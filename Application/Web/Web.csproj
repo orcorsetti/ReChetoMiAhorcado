@@ -119,6 +119,8 @@
     <Content Include="Resources\Horca%28intento 5%29.png" />
     <Content Include="Resources\Horca%28intento 6%29.png" />
     <Content Include="Resources\Horca%28intento 7%29.png" />
+    <Content Include="Resources\logo_favicon.ico" />
+    <Content Include="Resources\Logo_utn.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

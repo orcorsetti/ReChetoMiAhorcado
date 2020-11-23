@@ -10,25 +10,53 @@
 </head>
 <body>
     <form id="form1" runat="server">
-       <div>
-
-
-           <asp:Label ID="lblUsuario" runat="server" Text="Ingrese su Usuario"></asp:Label>
-
-
-       </div>
-        <div>
-            <asp:TextBox ID="txtBoxUserName" runat="server"></asp:TextBox>
-            <asp:Button ID="btnLogin" runat="server" Text="Ingresar" OnClick="btnLogin_Click" />
+    <nav class="navbar navbar-dark bg-secondary">
+        <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top " alt="">
+                    Ahorcado
+              </a>
         </div>
-        <div> 
-            <hr />
-            <asp:LinkButton ID="lnkCrearUsuario" runat="server" OnClick="lnkCrearUsuario_Click">Nunca jugaste? Create un usuario!</asp:LinkButton>
+    </nav>
+    <div class="container">
+        <div class="row justify-content-center p-5">
+        <div class="card">
+        <div class="card-body">
+        <h5 class="card-title"> Inicio de Sesión</h5>
+                <div class="row p-1">
+                    <label for="txtBoxUserName">Nombre de Usuario:</label>
+                    <asp:TextBox ID="txtBoxUserName" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="row p-1">
+                    <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-primary btn-block p-1 " Text="Ingresar" OnClick="btnLogin_Click" />
+                </div>
+            <p>
+                <asp:Label ID="lblEstado" runat="server" align="right" ForeColor="#FF3300"></asp:Label>
+            </p>
+            <div> 
+                <hr />
+                <asp:LinkButton ID="lnkCrearUsuario" runat="server" OnClick="lnkCrearUsuario_Click">Nunca jugaste? Create un usuario!</asp:LinkButton>
+            </div>
         </div>
-        <p>
-        
-            <asp:Label ID="lblEstado" runat="server" align="right" ForeColor="#FF3300"></asp:Label>
-        </p>
+        </div>
+        </div>
+    </div>
+
+        <footer class="navbar fixed-bottom navbar-dark bg-secondary">
+            <div class="container">
+                <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
+                <div class="card text-white bg-secondary" style="width: 18rem;">
+                <div class="card-header bg-info">
+                        Integrantes
+                    </div>
+                    <ul class="list-group list-group-flush bg-secondary">
+                        <li class="list-group-item bg-secondary">Romero, Joaquin      Legajo: 43740</li>
+                        <li class="list-group-item bg-secondary">Corsetti, Ornela     Legajo: 44034</li>
+                        <li class="list-group-item bg-secondary">Mateo, Lara          Legajo: xxxxx</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>

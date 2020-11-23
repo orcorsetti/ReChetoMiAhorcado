@@ -24,6 +24,15 @@ namespace Web
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control lnkBtnReturn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkBtnReturn;
+
+        /// <summary>
         /// Control txtBoxLetter.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPlayLetter;
+
+        /// <summary>
+        /// Control phAlerts.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phAlerts;
 
         /// <summary>
         /// Control lblWrongLetter.
@@ -96,15 +114,6 @@ namespace Web
         protected global::System.Web.UI.WebControls.PlaceHolder phLetters;
 
         /// <summary>
-        /// Control lblWord.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWord;
-
-        /// <summary>
         /// Control lblGameResult.
         /// </summary>
         /// <remarks>
@@ -114,6 +123,15 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label lblGameResult;
 
         /// <summary>
+        /// Control lblWord.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblWord;
+
+        /// <summary>
         /// Control btnTryAgain.
         /// </summary>
         /// <remarks>
@@ -121,14 +139,5 @@ namespace Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnTryAgain;
-
-        /// <summary>
-        /// Control btnReturn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReturn;
     }
 }

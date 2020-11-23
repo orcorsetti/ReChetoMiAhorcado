@@ -47,6 +47,8 @@ namespace Web
 
         private void actualizarJuego()
         {
+            phAlerts.Controls.Clear();
+
             if(ahlogic.Ahorcado.LetrasIncorrectas.Count > 0)
             {
                 string letrasinc = "";
@@ -56,8 +58,8 @@ namespace Web
                 }
                 lblIncorrectLetter.Text = letrasinc;
 
-                lblRemainingAttempts.Text = ahlogic.Ahorcado.CantIntentos.ToString();
             }
+            lblRemainingAttempts.Text = ahlogic.Ahorcado.CantIntentos.ToString();
             if(ahlogic.Ahorcado.LetrasCorrectas.Count > 0)
             {
                 generarLabelsLetras(ahlogic.Ahorcado);
@@ -94,13 +96,14 @@ namespace Web
             {
                 Label label = new Label();
                 label.ID = "lblLetter" + i.ToString();
+                label.CssClass = "lead p-2 text-white";
                 if (ahorcado.LetrasCorrectas.Contains(ahorcado.Palabra.PalabraActual[i]))
                 {
-                    label.Text = ahorcado.Palabra.PalabraActual[i].ToString()+" ";
+                    label.Text = ahorcado.Palabra.PalabraActual[i].ToString();
                 }
                 else
                 {
-                    label.Text = "_ ";
+                    label.Text = "_";
                 }
 
                 phLetters.Controls.Add(label);
@@ -132,9 +135,10 @@ namespace Web
 
                             txtBoxLetter.ReadOnly = true;
                             btnPlayLetter.Enabled = false;
+                            lblGameResult.CssClass = "card text-white bg-success p-2";
                             lblGameResult.Text = "Felicidades! Ganó en "+cantInt+" intentos!";
                             lblGameResult.Visible = true;
-                            btnReturn.Visible = true;
+                            btnTryAgain.Visible = true;
                         }
                     }
                     else
@@ -145,31 +149,37 @@ namespace Web
                             btnPlayLetter.Enabled = false;
                             lblWord.Text = "La palabra era " + ahlogic.Ahorcado.Palabra.PalabraActual;
                             lblWord.Visible = true;
+                            lblGameResult.CssClass = "card text-white bg-danger p-2";
                             lblGameResult.Text = "Casi Casi! Perdió el Juego, intente nuevamente.";
                             lblGameResult.Visible = true;
                             btnTryAgain.Visible = true;
-                            btnReturn.Visible = true;
                         }
                     }
                 }
                 else
                 {
-                    Response.Write("<script language=javascript>alert('Ingrese una letra que no haya utilizado previamente.')</script>");
+                    Label alert = new Label();
+                    alert.Text = "Ingrese una letra que no haya utilizado previamente";
+                    alert.CssClass = "alert alert-warning";
+                    phAlerts.Controls.Add(alert);
                 }
             } else 
             {
-                Response.Write("<script language=javascript>alert('Debe ingresar una letra.')</script>");
+                Label alert = new Label();
+                alert.Text = "Ingrese una letra";
+                alert.CssClass = "alert alert-warning";
+                phAlerts.Controls.Add(alert);
             }
-        }
-
-        protected void btnReturn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Menu.aspx");
         }
 
         protected void btnTryAgain_Click(object sender, EventArgs e)
         {
             Response.Redirect("NewGame.aspx");
+        }
+
+        protected void lnkBtnReturn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Menu.aspx");
         }
     }
 }

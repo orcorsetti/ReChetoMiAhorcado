@@ -10,6 +10,19 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <nav class="navbar navbar-dark bg-secondary">
+            <div class="container">
+                <div class="col-10">
+                  <a class="navbar-brand" href="#">
+                    <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Ahorcado
+                  </a>
+                </div>
+            <div class="col-2">
+                <asp:LinkButton ID="lnkBtnReturn" CssClass="nav-item text-white" runat="server" OnClick="btnReturn_Click">Volver al Menu</asp:LinkButton>
+            </div>
+            </div>
+        </nav>
         <div>
             <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
             <br />
@@ -33,10 +46,21 @@
             </asp:Panel>
             
         </div>
-        <div>
-            <br />
-            <asp:Button ID="btnReturn" runat="server" Text="Return to Menu" OnClick="btnReturn_Click" />
-        </div>
+        <footer class="navbar navbar-dark bg-secondary mt-auto">
+            <div class="container">
+                <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
+                <div class="card text-white bg-secondary" style="width: 18rem;">
+                <div class="card-header bg-info">
+                        Integrantes
+                    </div>
+                    <ul class="list-group list-group-flush bg-secondary">
+                        <li class="list-group-item bg-secondary">Romero, Joaquin | Legajo: 43740</li>
+                        <li class="list-group-item bg-secondary">Corsetti, Ornela | Legajo: 44034</li>
+                        <li class="list-group-item bg-secondary">Mateo, Lara | Legajo: xxxxx</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>

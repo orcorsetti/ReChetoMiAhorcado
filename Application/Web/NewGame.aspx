@@ -10,39 +10,84 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:TextBox ID="txtBoxLetter" runat="server" MaxLength="1" Width="40px"></asp:TextBox>
-            <asp:Button ID="btnPlayLetter" runat="server" Text="Play Letter!" OnClick="btnPlayLetter_Click" />
+        <nav class="navbar navbar-dark bg-secondary">
+            <div class="container">
+                <div class="col-10">
+                  <a class="navbar-brand" href="#">
+                    <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Ahorcado
+                  </a>
+                </div>
+            <div class="col-2">
+                <asp:LinkButton ID="lnkBtnReturn" CssClass="nav-item text-white" runat="server" OnClick="lnkBtnReturn_Click">Volver al Menu</asp:LinkButton>
+            </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row pb-2 pt-2">
+                <div class="col-7">
+                    <div class="form-inline">
+                        <div class="form-group mx-sm-2 mb-1 ">
+                            <asp:TextBox ID="txtBoxLetter"  runat="server" CssClass="form-control" placeholder="Letra" MaxLength="1"></asp:TextBox>
+                        </div>
+                            <asp:Button ID="btnPlayLetter" runat="server" CssClass="btn btn-primary mb-2" Text="Juega Letra!" OnClick="btnPlayLetter_Click" />
+                    </div>
+                </div>
+                <div class="col-5">
+                    <asp:PlaceHolder ID="phAlerts" runat="server"></asp:PlaceHolder>
+                </div>
+            </div>
+        <div class ="row">
+            <div class="list-group list-group-horizontal">
+                <asp:Label ID="lblWrongLetter" runat="server" CssClass="list-group-item list-group-item-info" Text="Letras Incorrectas: "></asp:Label>
+                <asp:Label ID="lblIncorrectLetter" CssClass="list-group-item" runat="server"></asp:Label>
+                <asp:Label ID="RemainingAttempts" runat="server" CssClass="list-group-item list-group-item-info " Text="Intentos Restantes: "></asp:Label>
+                <asp:Label ID="lblRemainingAttempts" runat="server" CssClass="list-group-item "></asp:Label>
+            </div>
         </div>
-        <div>
-            <asp:Label ID="lblWrongLetter" runat="server" Text="Wrong Letters: "></asp:Label>
-             <asp:Label ID="lblIncorrectLetter" runat="server"></asp:Label>
-            <br />
-            <asp:Label ID="RemainingAttempts" runat="server" Text="Remaining Attempts: "></asp:Label>
-            <asp:Label ID="lblRemainingAttempts" runat="server"></asp:Label>
 
+        <div class="row pb-2 pt-2 align-content-end">
+            <div class="col-2">
+                <asp:Image ID="imgAhorcado" runat="server" CssClass="img-thumbnail" Width="150" Height="200"/>
+            </div>
+            <div class="col-6">
+                <div class="card d-inline bg-info p-1">
+                    <asp:PlaceHolder ID="phLetters" runat="server"></asp:PlaceHolder>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row d-block p-1">
+                        <asp:Label ID="lblGameResult" runat="server" Text="Oculto" Visible="false"></asp:Label>
+                </div>
+                <div class="row d-block p-1">
+                        <asp:Label ID="lblWord" runat="server" CssClass="card card-danger border-danger p-2" Visible="false"></asp:Label>
+                </div>
+                <div class="row p-1">
+                    <asp:Button ID="btnTryAgain" runat="server" CssClass="btn btn-primary btn-block" Text="Volver a Jugar" Visible ="false" OnClick="btnTryAgain_Click"/>
+                </div>
+            </div>
         </div>
-
-        <div>
-            <br /> 
-            <asp:Image ID="imgAhorcado" runat="server"/>
-            <asp:PlaceHolder ID="phLetters" runat="server"></asp:PlaceHolder>
-
-            
-            
-
-
-            <br />
-
-            
-            <br />
-            <asp:Label ID="lblWord" runat="server" Visible="false"></asp:Label>
-            <br />
-            <asp:Label ID="lblGameResult" runat="server" Text="Oculto" Visible="false"></asp:Label>
-            <br />
-            <asp:Button ID="btnTryAgain" runat="server" Text="Try Again" Visible ="false" OnClick="btnTryAgain_Click"/>
-            <asp:Button ID="btnReturn" runat="server" Text="Return to Menu" Visible ="false" OnClick="btnReturn_Click"/>
         </div>
+        <footer class="navbar fixed-bottom navbar-dark bg-secondary mt-auto">
+            <div class="container">
+                <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
+                <div class="card text-white bg-secondary" style="width: 18rem;">
+                <div class="card-header bg-info">
+                        Integrantes
+                    </div>
+                    <ul class="list-group list-group-flush bg-secondary">
+                        <li class="list-group-item bg-secondary">Romero, Joaquin | Legajo: 43740</li>
+                        <li class="list-group-item bg-secondary">Corsetti, Ornela | Legajo: 44034</li>
+                        <li class="list-group-item bg-secondary">Mateo, Lara | Legajo: xxxxx</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     </form>
 </body>
