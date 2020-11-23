@@ -13,7 +13,11 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Usuario usu = (Usuario)this.Session["usuario"];
+            if (usu != null)
+            {
+                Response.Redirect("Menu.aspx");
+            }
         }
 
         protected void btnCrearUser_Click(object sender, EventArgs e)

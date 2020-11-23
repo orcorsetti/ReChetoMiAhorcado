@@ -13,7 +13,15 @@ namespace Web
         protected void Page_Load(object sender, EventArgs e)
         {
             Usuario usu = (Usuario)this.Session["usuario"];
-            lblUserName.Text = usu.UserName;
+            if(usu != null)
+            {  
+                lblUserName.Text = usu.UserName;
+            }
+            else
+            {
+                Response.Redirect("Inicio.aspx");
+            }
+            
         }
 
         protected void btnStartGame_Click(object sender, EventArgs e)

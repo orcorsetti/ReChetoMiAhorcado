@@ -15,25 +15,33 @@ namespace Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (!IsPostBack)
+            Usuario usr = (Usuario)Session["Usuario"];
+            if(usr != null)
             {
-                Usuario usr = (Usuario)Session["Usuario"];
-                Palabra pal;
-                if ((bool)Session["testMode"])
+                if (!IsPostBack)
                 {
-                    pal = new Palabra("salero");
+                    Palabra pal;
+                    if ((bool)Session["testMode"])
+                    {
+                        pal = new Palabra("salero");
+                    }
+                    else
+                    {
+                        pal = new Palabra();
+                    }
+                    Ahorcado ah = new Ahorcado(pal, usr);
+                    Session["Juego"] = new AhorcadoLogic(ah);
                 }
-                else
-                {
-                    pal = new Palabra();
-                }
-                Ahorcado ah = new Ahorcado(pal, usr);
-                Session["Juego"] = new AhorcadoLogic(ah);
+                ahlogic = (AhorcadoLogic)Session["Juego"];
+                generarLabelsLetras(ahlogic.Ahorcado);
+                actualizarJuego();
             }
-            ahlogic = (AhorcadoLogic)Session["Juego"];
-            generarLabelsLetras(ahlogic.Ahorcado);
-            actualizarJuego();
+            else
+            {
+                Response.Redirect("Inicio.aspx");
+            }
+
+           
 
         }
 

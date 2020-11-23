@@ -14,9 +14,17 @@ namespace Web
         protected void Page_Load(object sender, EventArgs e)
         {
             Usuario usr = (Usuario)Session["usuario"];
+            if(usr != null)
+            {
+                loadUserData(usr);
+                loadGrid();
+            }
+            else
+            {
+                Response.Redirect("Inicio.aspx");
+            }
 
-            loadUserData(usr);
-            loadGrid();
+            
         }
 
         private void loadUserData(Usuario usr)
