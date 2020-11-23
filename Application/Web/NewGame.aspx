@@ -25,9 +25,16 @@
 
         <div>
             <br /> 
+            <asp:Image ID="imgAhorcado" runat="server"/>
             <asp:PlaceHolder ID="phLetters" runat="server"></asp:PlaceHolder>
+
+            
+            
+
+
             <br />
 
+            
             <br />
             <asp:Label ID="lblWord" runat="server" Visible="false"></asp:Label>
             <br />

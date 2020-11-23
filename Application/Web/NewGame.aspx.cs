@@ -33,8 +33,8 @@ namespace Web
                     Session["Juego"] = new AhorcadoLogic(ah);
                 }
                 ahlogic = (AhorcadoLogic)Session["Juego"];
-                generarLabelsLetras(ahlogic.Ahorcado);
-                actualizarJuego();
+                generarLabelsLetras(ahlogic.Ahorcado);    
+                actualizarJuego();         
             }
             else
             {
@@ -61,6 +61,27 @@ namespace Web
             if(ahlogic.Ahorcado.LetrasCorrectas.Count > 0)
             {
                 generarLabelsLetras(ahlogic.Ahorcado);
+            }
+
+            switch (ahlogic.Ahorcado.CantIntentos)
+            {
+                case 0: this.imgAhorcado.ImageUrl = "~/Resources/Horca(intento 0).png";
+                    break;
+                case 1: this.imgAhorcado.ImageUrl = "~/Resources/Horca(intento 1).png";
+                    break;
+                case 2: this.imgAhorcado.ImageUrl = "~/Resources/Horca(intento 2).png";
+                    break;
+                case 3: this.imgAhorcado.ImageUrl = "~/Resources/Horca(intento 3).png";
+                    break;
+                case 4: this.imgAhorcado.ImageUrl = "~/Resources/Horca(intento 4).png";
+                    break;
+                case 5: this.imgAhorcado.ImageUrl = "~/Resources/Horca(intento 5).png";
+                    break;
+                case 6: this.imgAhorcado.ImageUrl = "~/Resources/Horca(intento 6).png";
+                    break;
+                case 7: this.imgAhorcado.ImageUrl = "~/Resources/Horca(intento 7).png";
+                    break;
+
             }
         }
 

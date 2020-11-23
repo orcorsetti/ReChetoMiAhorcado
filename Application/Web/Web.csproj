@@ -111,6 +111,14 @@
     <Content Include="Menu.aspx" />
     <Content Include="NewGame.aspx" />
     <Content Include="Ranking.aspx" />
+    <Content Include="Resources\Horca%28intento 0%29.png" />
+    <Content Include="Resources\Horca%28intento 1%29.png" />
+    <Content Include="Resources\Horca%28intento 2%29.png" />
+    <Content Include="Resources\Horca%28intento 3%29.png" />
+    <Content Include="Resources\Horca%28intento 4%29.png" />
+    <Content Include="Resources\Horca%28intento 5%29.png" />
+    <Content Include="Resources\Horca%28intento 6%29.png" />
+    <Content Include="Resources\Horca%28intento 7%29.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
