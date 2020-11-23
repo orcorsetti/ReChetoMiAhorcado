@@ -39,6 +39,12 @@ namespace Bussiness.Logic
             return usr;
         }
 
+        public List<Usuario> getTopTen()
+        {
+            List<Usuario> Users = UsrData.GetTopTen();
+
+            return Users;
+        }
         public Usuario getOne(string username) 
         {
             //trae usr

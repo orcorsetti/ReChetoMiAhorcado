@@ -20,5 +20,10 @@ namespace Web
         {
             Response.Redirect("NewGame.aspx");
         }
+
+        protected void btnRanking_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Ranking.aspx");
+        }
     }
 }

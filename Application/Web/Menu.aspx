@@ -12,7 +12,7 @@
         <div>
             <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
             <asp:Button ID="btnStartGame" runat="server" Text="New Game" OnClick="btnStartGame_Click" />
-            <asp:Button ID="btnRanking" runat="server" Text="Top Ranking" />
+            <asp:Button ID="btnRanking" runat="server" Text="Top Ranking" OnClick="btnRanking_Click" />
         </div>
     </form>
 </body>

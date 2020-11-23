@@ -69,6 +69,38 @@ namespace Data.Database
         //    }
         //}
 
+        public List<Usuario> GetTopTen()
+        {
+            List<Usuario> Users = new List<Usuario>();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdUsers = new SqlCommand("SELECT TOP(10) * FROM Usuarios ORDER BY Wins DESC", SqlConn);
+                SqlDataReader drUsers = cmdUsers.ExecuteReader();
+
+                while (drUsers.Read())
+                {
+                    Usuario usr = new Usuario();
+
+                    usr.UserName = (string)drUsers["UserName"];
+                    usr.Wins = (int)drUsers["Wins"];
+
+                    Users.Add(usr);
+                }
+
+                drUsers.Close();
+            } catch (Exception ex)
+            {
+                Exception exception = new Exception("Error al recuperar el ranking de usuarios", ex);
+                throw exception;
+            } finally
+            {
+                this.CloseConnection();
+            }
+
+            return Users;
+        }
+
         public void UpdateUser(Usuario usr)
         {
             try
