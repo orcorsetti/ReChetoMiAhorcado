@@ -11,7 +11,11 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+            <asp:Button ID="btnCloseSession" runat="server" Text="Close Session" OnClick="btnCloseSession_Click" />
+            <br />
+            <br />
             <asp:Button ID="btnStartGame" runat="server" Text="New Game" OnClick="btnStartGame_Click" />
+            <br />
             <asp:Button ID="btnRanking" runat="server" Text="Top Ranking" OnClick="btnRanking_Click" />
         </div>
     </form>

@@ -18,8 +18,15 @@ namespace Web
             
             if (!IsPostBack)
             {
+                Palabra pal;
+                if ((bool)Session["testMode"])
+                {
+                    pal = new Palabra("salero");
+                } else
+                {
+                    pal = new Palabra();
+                }
                 Usuario usr = (Usuario)Session["Usuario"];
-                Palabra pal = new Palabra("salero");
                 Ahorcado ah = new Ahorcado(pal, usr);
                 Session["Juego"] = new AhorcadoLogic(ah);
             }
@@ -97,6 +104,7 @@ namespace Web
                             btnPlayLetter.Enabled = false;
                             lblGameResult.Text = "Felicidades! Ganó en "+cantInt+" intentos!";
                             lblGameResult.Visible = true;
+                            btnTryAgain.Visible = true;
                             btnReturn.Visible = true;
                         }
                     }

@@ -47,27 +47,27 @@ namespace Data.Database
             }
         }
 
-        //public void InsertUser(Usuario usr) 
-        //{
-        //    try
-        //    {
-        //        this.OpenConnection();
-        //        SqlCommand cmdUsuario = new SqlCommand("insert into Usuarios(UserName, Wins, Losses) " +
-        //                                                        "values (@username, 0, 0)", SqlConn);
-        //        cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar,50).Value = usr.UserName;
+        public Usuario InsertUser(Usuario usr)
+        {
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdUsuario = new SqlCommand("insert into Usuarios(UserName, Wins, Losses) values (@username, 0, 0)", SqlConn);
+                cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = usr.UserName;
 
-        //        usr.UserId = Decimal.ToInt32((decimal)cmdUsuario.ExecuteScalar());
-        //    }
-        //    catch (Exception Ex)
-        //    {
-        //        Exception exception = new Exception("Error al insertar el usuario "+usr.UserName, Ex);
-        //        throw exception;
-        //    }
-        //    finally
-        //    {
-        //        this.CloseConnection();
-        //    }
-        //}
+                usr.UserId = Decimal.ToInt32((decimal)cmdUsuario.ExecuteScalar());
+            }
+            catch (Exception Ex)
+            {
+                Exception exception = new Exception("Error al insertar el usuario " + usr.UserName, Ex);
+                throw exception;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return usr;
+        }
 
         public List<Usuario> GetTopTen()
         {

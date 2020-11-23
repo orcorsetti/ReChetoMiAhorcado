@@ -13,7 +13,15 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string testMode = Request.QueryString["testMode"];
+            if (testMode == "true")
+            {
+                Session["testMode"] = true;
+            }
+            else
+            {
+                Session["testMode"] = false;
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -30,6 +38,11 @@ namespace Web
             {
                 Response.Redirect("Inicio.aspx");
             }
+        }
+
+        protected void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("NewUser.aspx");
         }
     }
 }

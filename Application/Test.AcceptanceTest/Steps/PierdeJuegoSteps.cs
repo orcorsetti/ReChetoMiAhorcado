@@ -14,7 +14,7 @@ namespace Test.AcceptanceTest.Steps
         [Given(@"the user enter her UserName ""(.*)"" and click Login")]
         public void GivenTheUserEnterHerUserNameAndClickLogin(string p0)
         {
-            WebDriver.Navigate().GoToUrl("https://localhost:44336/");
+            WebDriver.Navigate().GoToUrl("https://localhost:44336/Inicio.aspx?testMode=true");
 
             IWebElement txtBoxUserName = WebDriver.FindElement(By.Id("txtBoxUserName"));
             IWebElement btnLogin = WebDriver.FindElement(By.Id("btnLogin"));

@@ -10,28 +10,46 @@ namespace ReChetoMiAhoracado
     [TestClass]
     public class TestsPalabra
     {
+
         [TestMethod]
-        public void ControlarLargoPalabra()
+        public void ControlaPalabraTest()
         {
             //Arrange
+            Palabra pal = new Palabra("salero");
             PalabraLogic P = new PalabraLogic();
+            bool bandera;
 
             //Act
-            bool bandera = P.ControlaLargoPalabra("salero");
+            if (P.ControlaLargoPalabra(pal.PalabraActual) && P.ControlaSoloLetrasEnPalabra(pal.PalabraActual))
+            {
+                bandera = true;
+            }
+            else
+            {
+                bandera = false;
+            }
 
             //Assert
             Assert.IsTrue(bandera);
         }
 
         [TestMethod]
-        public void ControlarLetraPalabra()
+        public void ControlaPalabraRandom()
         {
             //Arrange
-            PalabraLogic P = new PalabraLogic();
+            Palabra pal = new Palabra();
+            PalabraLogic palLogic = new PalabraLogic();
+            bool bandera;
 
             //Act
-            bool bandera = P.ControlaSoloLetrasEnPalabra("salero");
-            
+            if(palLogic.ControlaLargoPalabra(pal.PalabraActual) && palLogic.ControlaSoloLetrasEnPalabra(pal.PalabraActual))
+            {
+                bandera = true;
+            }else
+            {
+                bandera = false;
+            }
+
             //Assert
             Assert.IsTrue(bandera);
         }

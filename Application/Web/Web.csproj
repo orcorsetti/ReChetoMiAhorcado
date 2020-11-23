@@ -109,6 +109,7 @@
     <Content Include="Inicio.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="NewGame.aspx" />
+    <Content Include="NewUser.aspx" />
     <Content Include="Ranking.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="NewGame.aspx.designer.cs">
       <DependentUpon>NewGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewUser.aspx.cs">
+      <DependentUpon>NewUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewUser.aspx.designer.cs">
+      <DependentUpon>NewUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ranking.aspx.cs">

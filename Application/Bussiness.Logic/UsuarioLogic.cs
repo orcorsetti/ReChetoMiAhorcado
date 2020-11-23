@@ -50,5 +50,12 @@ namespace Bussiness.Logic
             //trae usr
             return UsrData.GetUser(username);
         }
+
+        public Usuario CreateUser(Usuario usr)
+        {
+            Usuario newUsr = UsrData.InsertUser(usr);
+
+            return newUsr;
+        }
     }
 }

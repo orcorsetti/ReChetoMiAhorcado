@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Web.Inicio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewUser.aspx.cs" Inherits="Web.NewUser" %>
 
 <!DOCTYPE html>
 
@@ -10,12 +10,13 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblUserName" runat="server" Text="UserName: "></asp:Label>
             <asp:TextBox ID="txtBoxUserName" runat="server"></asp:TextBox>
             <br />
-            <asp:Button ID="btnLogin" runat="server" Text="Ingresar" OnClick="btnLogin_Click" />
             <br />
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click"/>
+            <asp:Button ID="btnCreate" runat="server" Text="Create" OnClick="btnCreate_Click"/>
             <br />
-            <asp:Button ID="btnCreateUser" runat="server" Text="Create New User" OnClick="btnCreateUser_Click"/>
         </div>
     </form>
 </body>
