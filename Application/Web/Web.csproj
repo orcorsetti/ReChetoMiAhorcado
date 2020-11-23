@@ -106,14 +106,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CrearUsuario.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="NewGame.aspx" />
-    <Content Include="NewUser.aspx" />
     <Content Include="Ranking.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearUsuario.aspx.cs">
+      <DependentUpon>CrearUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearUsuario.aspx.designer.cs">
+      <DependentUpon>CrearUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -134,13 +141,6 @@
     </Compile>
     <Compile Include="NewGame.aspx.designer.cs">
       <DependentUpon>NewGame.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="NewUser.aspx.cs">
-      <DependentUpon>NewUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewUser.aspx.designer.cs">
-      <DependentUpon>NewUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ranking.aspx.cs">

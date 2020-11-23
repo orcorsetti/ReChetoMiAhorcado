@@ -51,11 +51,10 @@ namespace Bussiness.Logic
             return UsrData.GetUser(username);
         }
 
-        public Usuario CreateUser(Usuario usr)
-        {
-            Usuario newUsr = UsrData.InsertUser(usr);
 
-            return newUsr;
+        public void CreateUser(Usuario usr)
+        {
+            UsrData.CreateUser(usr);
         }
     }
 }

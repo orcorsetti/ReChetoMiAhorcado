@@ -47,13 +47,17 @@ namespace Data.Database
             }
         }
 
-        public Usuario InsertUser(Usuario usr)
+        public void CreateUser(Usuario usr)
         {
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuario = new SqlCommand("insert into Usuarios(UserName, Wins, Losses) values (@username, 0, 0)", SqlConn);
+                SqlCommand cmdUsuario = new SqlCommand("insert into Usuarios(UserName, Wins, Losses) " +
+                                                                "values (@username, @wins, @losses) select @@identity", SqlConn);
+                cmdUsuario.Parameters.Add("@userid", SqlDbType.Int).Value = usr.UserId;
                 cmdUsuario.Parameters.Add("@username", SqlDbType.VarChar, 50).Value = usr.UserName;
+                cmdUsuario.Parameters.Add("@wins", SqlDbType.Int).Value = usr.Wins;
+                cmdUsuario.Parameters.Add("@losses", SqlDbType.Int).Value = usr.Losses;
 
                 usr.UserId = Decimal.ToInt32((decimal)cmdUsuario.ExecuteScalar());
             }
@@ -66,7 +70,6 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-            return usr;
         }
 
         public List<Usuario> GetTopTen()

@@ -36,13 +36,14 @@ namespace Web
             }
             else
             {
-                Response.Redirect("Inicio.aspx");
+                this.lblEstado.Text = string.Format("Usuario no encontrado");
+                this.txtBoxUserName.Text = "";
             }
         }
 
-        protected void btnCreateUser_Click(object sender, EventArgs e)
+        protected void lnkCrearUsuario_Click(object sender, EventArgs e)
         {
-            Response.Redirect("NewUser.aspx");
+            Response.Redirect("CrearUsuario.aspx");
         }
     }
 }

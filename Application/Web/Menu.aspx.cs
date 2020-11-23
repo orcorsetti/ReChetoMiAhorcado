@@ -26,7 +26,7 @@ namespace Web
             Response.Redirect("Ranking.aspx");
         }
 
-        protected void btnCloseSession_Click(object sender, EventArgs e)
+        protected void lnkSalir_Click(object sender, EventArgs e)
         {
             Session.Remove("usuario");
             Response.Redirect("Inicio.aspx");
