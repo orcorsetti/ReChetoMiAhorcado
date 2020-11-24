@@ -32,7 +32,7 @@
             <div class="card-body"></div>
             <h5 class="card-title">Menu</h5>
             <asp:Button ID="btnStartGame" runat="server" CssClass="btn btn-primary btn-lg btn-block p-1" Text="New Game" OnClick="btnStartGame_Click" />
-            <asp:Button ID="btnRanking" runat="server" CssClass="btn btn-primary btn-lg btn-block p-1" Text="Top Ranking" OnClick="btnRanking_Click" />
+            <asp:Button ID="btnRanking" runat="server" CssClass="btn btn-primary btn-lg btn-block p-1" Text="Ranking" OnClick="btnRanking_Click" />
             <br />
         </div>
         </div>

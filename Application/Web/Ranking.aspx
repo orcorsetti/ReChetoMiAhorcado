@@ -12,39 +12,53 @@
     <form id="form1" runat="server">
         <nav class="navbar navbar-dark bg-secondary">
             <div class="container">
-                <div class="col-10">
+                <div class="col-9">
                   <a class="navbar-brand" href="#">
                     <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top" alt="">
                         Ahorcado
                   </a>
                 </div>
-            <div class="col-2">
-                <asp:LinkButton ID="lnkBtnReturn" CssClass="nav-item text-white" runat="server" OnClick="btnReturn_Click">Volver al Menu</asp:LinkButton>
-            </div>
+                <div class="col-1">
+                    <asp:Label ID="lblUserName" runat="server" CssClass="text-white" Text="Label"></asp:Label>
+                </div>
+                <div class="col-2">
+                    <asp:LinkButton ID="lnkBtnReturn" CssClass="nav-item text-white" runat="server" OnClick="btnReturn_Click">Volver al Menu</asp:LinkButton>
+                </div>
             </div>
         </nav>
-        <div>
-            <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
-            <br />
-            <asp:Label ID="lblWinsTitle" runat="server" Text="Wins: "></asp:Label>
-            <asp:Label ID="lblWins" runat="server" Text=""></asp:Label>
-            <br />
-            <asp:Label ID="lblLossesTitle" runat="server" Text="Losses: "></asp:Label>
-            <asp:Label ID="lblLosses" runat="server" Text=""></asp:Label>
-            <br />
-        </div>
-        <div>
-            <asp:Panel ID="RankingPanel" runat="server">
-                <asp:GridView ID="RankingGridView" runat="server" AutoGenerateColumns="False">
-
-                    <Columns>
-                        <asp:BoundField HeaderText="User" DataField="UserName" ReadOnly="true"/>
-                        <asp:BoundField HeaderText="Wins" DataField="Wins" ReadOnly="true"/>
-                    </Columns>
-
-                </asp:GridView>
-            </asp:Panel>
-            
+        <div class="container">
+            <div class="row p-2 justify-content-center">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tus Partidas:</h5>
+                                <div class="list-group list-group-horizontal-sm">
+                                    <asp:Label ID="lblWinsTitle" runat="server" CssClass="list-group-item bg-success text-white" Text="Ganadas:"></asp:Label>
+                                    <asp:Label ID="lblWins" runat="server" CssClass="list-group-item"></asp:Label>
+                                    <asp:Label ID="lblLossesTitle" runat="server" CssClass="list-group-item bg-danger text-white" Text="Perdidas:"></asp:Label>
+                                    <asp:Label ID="lblLosses" runat="server" CssClass="list-group-item" Text=""></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Top 10 Jugadores</h5>
+                            <asp:Panel ID="RankingPanel" runat="server">
+                                <asp:GridView ID="RankingGridView" runat="server" AutoGenerateColumns="False" BorderStyle="None" CssClass="table table-sm striped">
+                                    <Columns>
+                                        <asp:BoundField HeaderText="User"  DataField="UserName" ReadOnly="true"/>
+                                        <asp:BoundField HeaderText="Wins" DataField="Wins" ReadOnly="true"/>
+                                    </Columns>
+                                    <EditRowStyle CssClass="row" />
+                                    <HeaderStyle CssClass="col" />
+                                </asp:GridView>
+                            </asp:Panel>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="navbar navbar-dark bg-secondary mt-auto">
             <div class="container">
