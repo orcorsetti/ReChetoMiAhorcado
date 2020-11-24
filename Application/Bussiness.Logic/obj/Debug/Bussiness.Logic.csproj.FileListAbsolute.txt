@@ -10,27 +10,3 @@ C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bu
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CopyComplete
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.pdb
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.dll.config
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.dll
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.pdb
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\bin\Debug\Business Entities.dll
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\bin\Debug\Data.Database.dll
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\bin\Debug\Business Entities.pdb
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\bin\Debug\Data.Database.pdb
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csprojAssemblyReference.cache
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CoreCompileInputs.cache
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CopyComplete
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.dll
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.pdb
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.dll.config
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.dll
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\bin\Debug\Bussiness.Logic.pdb
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\bin\Debug\Business Entities.dll
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\bin\Debug\Data.Database.dll
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\bin\Debug\Business Entities.pdb
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\bin\Debug\Data.Database.pdb
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csprojAssemblyReference.cache
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CoreCompileInputs.cache
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.csproj.CopyComplete
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.dll
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Bussiness.Logic\obj\Debug\Bussiness.Logic.pdb

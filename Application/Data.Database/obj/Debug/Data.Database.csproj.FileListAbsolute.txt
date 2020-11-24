@@ -7,21 +7,3 @@ C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data.Database.dll
 C:\Users\ornec\GitHub\ReChetoMiAhorcado\Application\Data.Database\obj\Debug\Data.Database.pdb
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\bin\Debug\Data.Database.dll
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\bin\Debug\Data.Database.pdb
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\bin\Debug\Business Entities.dll
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\bin\Debug\Business Entities.pdb
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\obj\Debug\Data.Database.csprojAssemblyReference.cache
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\obj\Debug\Data.Database.csproj.CoreCompileInputs.cache
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\obj\Debug\Data.Database.dll
-C:\Users\Joaco\Desktop\Facultad\Agiles 3.0\Application\Data.Database\obj\Debug\Data.Database.pdb
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\bin\Debug\Data.Database.dll
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\bin\Debug\Data.Database.pdb
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\bin\Debug\Business Entities.dll
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\bin\Debug\Business Entities.pdb
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\obj\Debug\Data.Database.csprojAssemblyReference.cache
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\obj\Debug\Data.Database.csproj.CoreCompileInputs.cache
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\obj\Debug\Data.Database.csproj.CopyComplete
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\obj\Debug\Data.Database.dll
-C:\Users\Joaco\Desktop\Facultad\Agileeees\Application\Data.Database\obj\Debug\Data.Database.pdb

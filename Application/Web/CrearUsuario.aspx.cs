@@ -32,7 +32,7 @@ namespace Web
                 {
                     Label alert = new Label();
                     alert.Text = "Este usuario ya existe!";
-                    alert.CssClass = "alert alert-success";
+                    alert.CssClass = "alert alert-danger";
                     phAlerts.Controls.Add(alert);
                 }
                 else
