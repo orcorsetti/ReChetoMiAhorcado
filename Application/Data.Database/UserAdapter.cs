@@ -78,7 +78,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsers = new SqlCommand("SELECT TOP(10) * FROM Usuarios ORDER BY Wins DESC", SqlConn);
+                SqlCommand cmdUsers = new SqlCommand("SELECT TOP(10) * FROM Usuarios WHERE Wins != '0' ORDER BY Wins DESC", SqlConn);
                 SqlDataReader drUsers = cmdUsers.ExecuteReader();
 
                 while (drUsers.Read())

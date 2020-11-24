@@ -27,16 +27,27 @@ namespace Web
             UsuarioLogic ulogic = new UsuarioLogic();
             if (!string.IsNullOrWhiteSpace(this.txtBoxUserName.Text))
             {
-                usr.UserName = this.txtBoxUserName.Text;
-                usr.Wins = 0;
-                usr.Losses = 0;
-                ulogic.CreateUser(usr);
-                Label alert = new Label();
-                alert.Text = "Usuario Creado Exitosamente";
-                alert.CssClass = "alert alert-success";
-                phAlerts.Controls.Add(alert);
-                this.txtBoxUserName.Enabled = false;
-                this.btnCrearUser.Visible = false;
+                Usuario uprueba = ulogic.getOne(this.txtBoxUserName.Text);
+                if (!string.IsNullOrEmpty(uprueba.UserName))
+                {
+                    Label alert = new Label();
+                    alert.Text = "Este usuario ya existe!";
+                    alert.CssClass = "alert alert-success";
+                    phAlerts.Controls.Add(alert);
+                }
+                else
+                {
+                    usr.UserName = this.txtBoxUserName.Text;
+                    usr.Wins = 0;
+                    usr.Losses = 0;
+                    ulogic.CreateUser(usr);
+                    Label alert = new Label();
+                    alert.Text = "Usuario Creado Exitosamente";
+                    alert.CssClass = "alert alert-success";
+                    phAlerts.Controls.Add(alert);
+                    this.txtBoxUserName.Enabled = false;
+                    this.btnCrearUser.Visible = false;
+                }  
             }
             else
             {
