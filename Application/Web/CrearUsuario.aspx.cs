@@ -18,6 +18,7 @@ namespace Web
             {
                 Response.Redirect("Menu.aspx");
             }
+            phAlerts.Controls.Clear();
         }
 
         protected void btnCrearUser_Click(object sender, EventArgs e)
@@ -30,13 +31,19 @@ namespace Web
                 usr.Wins = 0;
                 usr.Losses = 0;
                 ulogic.CreateUser(usr);
-                Response.Write("<script language=javascript>alert('Usuario creado exitosamente!')</script>");
+                Label alert = new Label();
+                alert.Text = "Usuario Creado Exitosamente";
+                alert.CssClass = "alert alert-success";
+                phAlerts.Controls.Add(alert);
                 this.txtBoxUserName.Enabled = false;
                 this.btnCrearUser.Visible = false;
             }
             else
             {
-                Response.Write("<script language=javascript>alert('Ingrese un nombre de usuario')</script>");
+                Label alert = new Label();
+                alert.Text = "Ingrese un Nombre de Usuario";
+                alert.CssClass = "alert alert-danger";
+                phAlerts.Controls.Add(alert);
             }
         }
 

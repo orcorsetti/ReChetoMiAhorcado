@@ -12,18 +12,22 @@
     <form id="form1" runat="server">
         <nav class="navbar navbar-dark bg-secondary">
             <div class="container">
-                <div class="col-10">
+                <div class="col-9">
                   <a class="navbar-brand" href="#">
                     <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top" alt="">
                         Ahorcado
                   </a>
                 </div>
+            <div class="col-1">
+                <asp:Label ID="lblUserName" runat="server" CssClass="text-white"></asp:Label>
+            </div>
             <div class="col-2">
                 <asp:LinkButton ID="lnkBtnReturn" CssClass="nav-item text-white" runat="server" OnClick="lnkBtnReturn_Click">Volver al Menu</asp:LinkButton>
             </div>
             </div>
         </nav>
         <div class="container">
+            <br />
             <div class="row pb-2 pt-2">
                 <div class="col-7">
                     <div class="form-inline">

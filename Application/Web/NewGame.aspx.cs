@@ -41,7 +41,7 @@ namespace Web
                 Response.Redirect("Inicio.aspx");
             }
 
-           
+            lblUserName.Text = usr.UserName;
 
         }
 
@@ -160,14 +160,14 @@ namespace Web
                 {
                     Label alert = new Label();
                     alert.Text = "Ingrese una letra que no haya utilizado previamente";
-                    alert.CssClass = "alert alert-warning";
+                    alert.CssClass = "alert alert-danger";
                     phAlerts.Controls.Add(alert);
                 }
             } else 
             {
                 Label alert = new Label();
                 alert.Text = "Ingrese una letra";
-                alert.CssClass = "alert alert-warning";
+                alert.CssClass = "alert alert-danger";
                 phAlerts.Controls.Add(alert);
             }
         }

@@ -10,20 +10,56 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            
-            <asp:Label ID="lblTitulo" runat="server" Text="Crear Usuario"></asp:Label>
-            <hr />
-            <asp:Label ID="lblNombre" runat="server" Text="Escriba su nombre de usuario"></asp:Label>
-            <asp:TextBox ID="txtBoxUserName" runat="server"></asp:TextBox>
-            <hr />
-            <asp:Button ID="btnCrearUser" runat="server" Text="Crear Usuario" OnClick="btnCrearUser_Click" />
-
-            
-            <asp:Button ID="btnVolver" runat="server" Text="Volver al Menu" OnClick="btnVolver_Click" />
-
-            
+        <nav class="navbar navbar-dark bg-secondary">
+            <div class="container">
+                    <a class="navbar-brand" href="#">
+                    <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top " alt="">
+                        Ahorcado
+                    </a>
+            </div>
+        </nav>
+        <div class="container">
+            <br />
+            <div class="row justify-content-end">
+                <asp:PlaceHolder ID="phAlerts" runat="server"></asp:PlaceHolder>
+            </div>
+            <div class="row justify-content-center p-3">
+                <div class="card">
+                    <div class="card-body">
+                        <asp:Label ID="lblTitulo" runat="server" CssClass="card-title h5" Text="Crear Usuario"></asp:Label>
+                        <div class="form-group">
+                            <div class="row p-1">
+                                <asp:Label ID="lblNombre" runat="server" Text="Nombre de Usuario"></asp:Label>
+                                <asp:TextBox ID="txtBoxUserName" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col">
+                                    <asp:Button ID="btnVolver" runat="server" Text="Volver al Menu" CssClass="btn btn-secondary" OnClick="btnVolver_Click" />
+                                </div>
+                                <div class="col">
+                                    <asp:Button ID="btnCrearUser" runat="server" Text="Crear Usuario" CssClass="btn btn-primary" OnClick="btnCrearUser_Click" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <footer class="navbar fixed-bottom navbar-dark bg-secondary">
+            <div class="container">
+                <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
+                <div class="card text-white bg-secondary" style="width: 18rem;">
+                <div class="card-header bg-info">
+                        Integrantes
+                    </div>
+                    <ul class="list-group list-group-flush bg-secondary">
+                        <li class="list-group-item bg-secondary">Romero, Joaquin | Legajo: 43740</li>
+                        <li class="list-group-item bg-secondary">Corsetti, Ornela | Legajo: 44034</li>
+                        <li class="list-group-item bg-secondary">Mateo, Lara | Legajo: xxxxx</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>

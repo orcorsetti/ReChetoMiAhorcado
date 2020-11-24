@@ -47,9 +47,9 @@
                         Integrantes
                     </div>
                     <ul class="list-group list-group-flush bg-secondary">
-                        <li class="list-group-item bg-secondary">Romero, Joaquin      Legajo: 43740</li>
-                        <li class="list-group-item bg-secondary">Corsetti, Ornela     Legajo: 44034</li>
-                        <li class="list-group-item bg-secondary">Mateo, Lara          Legajo: xxxxx</li>
+                        <li class="list-group-item bg-secondary">Romero, Joaquin | Legajo: 43740</li>
+                        <li class="list-group-item bg-secondary">Corsetti, Ornela | Legajo: 44034</li>
+                        <li class="list-group-item bg-secondary">Mateo, Lara | Legajo: xxxxx</li>
                     </ul>
                 </div>
             </div>
