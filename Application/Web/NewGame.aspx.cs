@@ -54,11 +54,14 @@ namespace Web
                 string letrasinc = "";
                 foreach (char c in ahlogic.Ahorcado.LetrasIncorrectas)
                 {
-                    letrasinc = letrasinc + c + ", ";
+                    letrasinc = letrasinc + c + "   ";
                 }
                 lblIncorrectLetter.Text = letrasinc;
 
             }
+
+            txtBoxLetter.Focus();
+
             lblRemainingAttempts.Text = ahlogic.Ahorcado.CantIntentos.ToString();
             if(ahlogic.Ahorcado.LetrasCorrectas.Count > 0)
             {
