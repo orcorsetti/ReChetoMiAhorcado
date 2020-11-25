@@ -142,10 +142,12 @@ this.ScenarioInitialize(scenarioInfo);
                             "h"});
                 table2.AddRow(new string[] {
                             "b"});
+                table2.AddRow(new string[] {
+                            "k"});
 #line 10
  testRunner.When("the user plays incorrect letters", ((string)(null)), table2, "When ");
 #line hidden
-#line 18
+#line 19
  testRunner.Then("the user losses and the game confort her", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

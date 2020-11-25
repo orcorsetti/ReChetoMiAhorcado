@@ -13,7 +13,7 @@
     <nav class="navbar navbar-dark bg-secondary">
         <div class="container">
               <a class="navbar-brand" href="#">
-                <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top " alt="">
+                <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top " alt="" loading="lazy">
                     Ahorcado
               </a>
         </div>

@@ -15,4 +15,5 @@ Scenario: User Losses the game
 	| u      |
 	| h      |
 	| b      |
+	| k      | 
 	Then the user losses and the game confort her

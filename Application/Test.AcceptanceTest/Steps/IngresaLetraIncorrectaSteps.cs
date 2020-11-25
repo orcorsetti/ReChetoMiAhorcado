@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
 using TechTalk.SpecFlow;
 
@@ -9,12 +10,13 @@ namespace Test.AcceptanceTest.Steps
     [Binding]
     public class IngresaLetraIncorrectaSteps
     {
-        public IWebDriver WebDriver => new ChromeDriver();
+        public IWebDriver WebDriver;
 
         [Given(@"the use enter the username ""(.*)"" and click login")]
         public void GivenTheUseEnterTheUsernameAndClickLogin(string p0)
         {
-            WebDriver.Navigate().GoToUrl("https://localhost:44336/Inicio.aspx?testMode=true");
+            WebDriver = new ChromeDriver();
+            WebDriver.Navigate().GoToUrl("https://ahorcadogrupo04.azurewebsites.net/Inicio.aspx?testMode=true");
 
             IWebElement txtBoxUserName = WebDriver.FindElement(By.Id("txtBoxUserName"));
             IWebElement btnLogin = WebDriver.FindElement(By.Id("btnLogin"));
@@ -22,7 +24,7 @@ namespace Test.AcceptanceTest.Steps
             txtBoxUserName.SendKeys(p0);
             btnLogin.Click();
 
-            WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            new WebDriverWait(WebDriver, TimeSpan.FromMinutes(1)).Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#lblUserName")));
         }
         
         [Given(@"the user click star a new game")]
@@ -32,7 +34,7 @@ namespace Test.AcceptanceTest.Steps
 
             btnStartGame.Click();
 
-            WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            new WebDriverWait(WebDriver, TimeSpan.FromMinutes(1)).Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#txtBoxLetter")));
         }
         
         [Given(@"the user enter an incorrect letter ""(.*)""")]
@@ -50,15 +52,14 @@ namespace Test.AcceptanceTest.Steps
 
             btnPlayLetter.Click();
 
-            WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-            WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            new WebDriverWait(WebDriver, TimeSpan.FromSeconds(5)).Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#lblLetter0")));
         }
         
         [Then(@"the game shows the letter ""(.*)"" as incorrect and the remaining attemps are ""(.*)""")]
         public void ThenTheGameShowsTheLetterAsIncorrectAndTheRemainingAttempsAre(string p0, int p1)
         {
-            string lblIncorrectLetter = WebDriver.FindElement(By.Id("lblIncorrectLetter")).Text;
-            string lblRemainingAttemps = WebDriver.FindElement(By.Id("lblRemainingAttemps")).Text;
+            string lblIncorrectLetter = WebDriver.FindElement(By.CssSelector("#lblIncorrectLetter")).Text;
+            string lblRemainingAttemps = WebDriver.FindElement(By.CssSelector("#lblRemainingAttempts")).Text;
 
             bool testResult;
 
