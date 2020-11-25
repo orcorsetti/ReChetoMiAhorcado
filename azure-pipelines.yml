@@ -24,16 +24,17 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(System.DefaultWorkingDirectory)"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: AzureWebApp@1
+- task: AzureRmWebAppDeployment@4
   inputs:
+    ConnectionType: 'AzureRM'
     azureSubscription: 'AhorcadoGrupo04 - 1 - Azure'
     appType: 'webApp'
-    appName: 'AhorcadoGrupo04'
-    package: '$(build.artifactStagingDirectory)/*.zip'
+    WebAppName: 'AhorcadoGrupo04'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/*.zip'
 
 - task: VSTest@2
   inputs:
