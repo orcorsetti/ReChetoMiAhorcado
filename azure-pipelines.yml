@@ -28,7 +28,13 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'AhorcadoGrupo04 - 1 - Azure'
+    appType: 'webApp'
+    appName: 'AhorcadoGrupo04'
+    package: '$(build.artifactStagingDirectory)/*.zip'
+    deploymentMethod: 'runFromPackage'
 
 - task: VSTest@2
   inputs:
@@ -44,13 +50,6 @@ steps:
     codeCoverageEnabled: true
   displayName: 'Tests'
   
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'AhorcadoGrupo04 - 1 - Azure'
-    appType: 'webApp'
-    appName: 'AhorcadoGrupo04'
-    package: '$(build.artifactStagingDirectory)}/*.zip'
-    deploymentMethod: 'runFromPackage'
 
 - task: VSTest@2
   displayName: 'AcceptanceTest'
