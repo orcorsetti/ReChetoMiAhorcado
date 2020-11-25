@@ -5,7 +5,6 @@
 
 trigger:
 - master
-- feature/*
 
 pool:
   vmImage: 'windows-latest'
@@ -50,10 +49,11 @@ steps:
     codeCoverageEnabled: true
   displayName: 'Tests'
 
-
-
-#- task: PublishCodeCoverageResults@1
-#  inputs:
-#    codeCoverageTool: 'Cobertura'
-#    summaryFileLocation: '**coverage.cobertura.xml'
-#    reportDirectory: '$(system.defaultworkingdirectory)\reports'
+- task: VSTest@2
+  displayName: 'AcceptanceTest'
+  inputs:
+    testAssemblyVer2: |
+     **\$(BuildConfiguration)\*test*.dll
+     !**\obj\**
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
