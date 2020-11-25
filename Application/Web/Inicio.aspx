@@ -19,6 +19,10 @@
         </div>
     </nav>
     <div class="container">
+        <br />
+        <div class="row justify-content-end">
+            <asp:PlaceHolder ID="phAlerts" runat="server"></asp:PlaceHolder>
+        </div>
         <div class="row justify-content-center p-5">
         <div class="card">
         <div class="card-body">
@@ -42,7 +46,7 @@
         </div>
     </div>
 
-        <footer class="navbar fixed-bottom navbar-dark bg-secondary">
+        <footer class="navbar navbar-dark bg-secondary auto-mt">
             <div class="container">
                 <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
                 <div class="card text-white bg-secondary" style="width: 18rem;">
@@ -52,7 +56,7 @@
                     <ul class="list-group list-group-flush bg-secondary">
                         <li class="list-group-item bg-secondary">Romero, Joaquin | Legajo: 43740</li>
                         <li class="list-group-item bg-secondary">Corsetti, Ornela | Legajo: 44034</li>
-                        <li class="list-group-item bg-secondary">Mateo, Lara | Legajo: xxxxx</li>
+                        <li class="list-group-item bg-secondary">Mateo, Lara | Legajo: 44795</li>
                     </ul>
                 </div>
             </div>

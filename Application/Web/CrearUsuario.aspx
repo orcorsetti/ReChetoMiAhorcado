@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
         <nav class="navbar navbar-dark bg-secondary">
             <div class="container">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="Inicio.aspx">
                     <img src="/Resources/Logo_utn.png" width="30" height="30" class="d-inline-block align-top " alt="">
                         Ahorcado
                     </a>
@@ -47,7 +47,7 @@
         </div>
         <footer class="navbar fixed-bottom navbar-dark bg-secondary">
             <div class="container">
-                <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
+                <a class="navbar-brand lead">Metodologías Ágiles en Desarrollo de Software</a>
                 <div class="card text-white bg-secondary" style="width: 18rem;">
                 <div class="card-header bg-info">
                         Integrantes
@@ -55,7 +55,7 @@
                     <ul class="list-group list-group-flush bg-secondary">
                         <li class="list-group-item bg-secondary">Romero, Joaquin | Legajo: 43740</li>
                         <li class="list-group-item bg-secondary">Corsetti, Ornela | Legajo: 44034</li>
-                        <li class="list-group-item bg-secondary">Mateo, Lara | Legajo: xxxxx</li>
+                        <li class="list-group-item bg-secondary">Mateo, Lara | Legajo: 44795</li>
                     </ul>
                 </div>
             </div>

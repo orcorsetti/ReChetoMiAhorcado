@@ -22,22 +22,36 @@ namespace Web
             {
                 Session["testMode"] = false;
             }
+            phAlerts.Controls.Clear();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Usuario usr;
-            UsuarioLogic ulogic = new UsuarioLogic();
-            usr = ulogic.getOne(txtBoxUserName.Text);
-            if(usr.UserName != null)
+            string username = txtBoxUserName.Text;
+            if (!String.IsNullOrEmpty(username))
             {
-                Session["usuario"] = usr;
-                Response.Redirect("Menu.aspx");
-            }
-            else
+                Usuario usr;
+                UsuarioLogic ulogic = new UsuarioLogic();
+                usr = ulogic.getOne(username);
+                if(usr.UserName != null)
+                {
+                    Session["usuario"] = usr;
+                    Response.Redirect("Menu.aspx");
+                }
+                else
+                {
+                    Label lblAlert = new Label();
+                    lblAlert.Text = "Usuario no encontrado.";
+                    lblAlert.CssClass = "alert alert-danger";
+                    phAlerts.Controls.Add(lblAlert);
+                    this.txtBoxUserName.Text = "";
+                }
+            } else
             {
-                this.lblEstado.Text = string.Format("Usuario no encontrado");
-                this.txtBoxUserName.Text = "";
+                Label lblAlert = new Label();
+                lblAlert.Text = "Ingrese un Nombre de Usuario.";
+                lblAlert.CssClass = "alert alert-danger";
+                phAlerts.Controls.Add(lblAlert);
             }
         }
 
