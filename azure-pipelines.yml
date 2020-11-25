@@ -28,13 +28,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-#- task: DotNetCoreCLI@2
-#  inputs:
-#    command: test
-#    projects: '**/ReChetoMiAhoracado/*.csproj'
-#    arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
-#    nobuild: true
-
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -48,7 +41,15 @@ steps:
     vsTestVersion: '16.0'
     codeCoverageEnabled: true
   displayName: 'Tests'
+  
 
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Evaluación gratuita(9e9d503f-7c9a-498f-b637-2d73b6628d47)'
+    appType: 'webApp'
+    appName: 'AhorcadoGrupo04'
+    package: 'D:\a\r1\a\Drop\drop\Web.zip'
+    deploymentMethod: 'auto'
 - task: VSTest@2
   displayName: 'AcceptanceTest'
   inputs:
