@@ -28,13 +28,13 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: AzureRmWebAppDeployment@4
+- task: SonarCloudPrepare@1
   inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'AhorcadoGrupo04 - 1 - Azure'
-    appType: 'webApp'
-    WebAppName: 'AhorcadoGrupo04'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/*.zip'
+    SonarCloud: 'SonarCloud TestCode'
+    organization: 'orcorsetti'
+    scannerMode: 'MSBuild'
+    projectKey: 'orcorsetti_ReChetoMiAhorcado'
+    projectName: 'ReChetoMiAhorcado'
 
 - task: VSTest@2
   inputs:
@@ -50,6 +50,14 @@ steps:
     codeCoverageEnabled: true
   displayName: 'Tests'
   
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'AhorcadoGrupo04 - 1 - Azure'
+    appType: 'webApp'
+    WebAppName: 'AhorcadoGrupo04'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/*.zip'
 
 - task: VSTest@2
   displayName: 'AcceptanceTest'
