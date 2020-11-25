@@ -49,7 +49,7 @@ steps:
     azureSubscription: 'AhorcadoGrupo04 - 1 - Azure'
     appType: 'webApp'
     appName: 'AhorcadoGrupo04'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(build.artifactStagingDirectory)}/*.zip'
     deploymentMethod: 'runFromPackage'
 
 - task: VSTest@2
