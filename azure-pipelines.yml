@@ -44,14 +44,13 @@ steps:
     codeCoverageEnabled: true
   displayName: 'Tests'
   
-
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'Evaluación gratuita(9e9d503f-7c9a-498f-b637-2d73b6628d47)'
+    azureSubscription: 'AhorcadoGrupo04 - 1 - Azure'
     appType: 'webApp'
     appName: 'AhorcadoGrupo04'
-    package: '$(build.artifactStagingDirectory)/*.zip'
-    deploymentMethod: 'auto'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'runFromPackage'
 
 - task: VSTest@2
   displayName: 'AcceptanceTest'
