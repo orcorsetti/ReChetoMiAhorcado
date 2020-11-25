@@ -34,7 +34,6 @@ steps:
     appType: 'webApp'
     appName: 'AhorcadoGrupo04'
     package: '$(build.artifactStagingDirectory)/*.zip'
-    deploymentMethod: 'runFromPackage'
 
 - task: VSTest@2
   inputs:
