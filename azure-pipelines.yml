@@ -48,8 +48,9 @@ steps:
     azureSubscription: 'Evaluación gratuita(9e9d503f-7c9a-498f-b637-2d73b6628d47)'
     appType: 'webApp'
     appName: 'AhorcadoGrupo04'
-    package: 'D:\a\r1\a\Drop\drop\Web.zip'
+    package: '$(build.artifactStagingDirectory)/**/*.*'
     deploymentMethod: 'auto'
+
 - task: VSTest@2
   displayName: 'AcceptanceTest'
   inputs:
@@ -57,4 +58,4 @@ steps:
      **\$(BuildConfiguration)\*test*.dll
      !**\obj\**
     platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
+    configuration: '$(BuildCxonfiguration)'
