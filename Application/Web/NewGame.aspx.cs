@@ -116,7 +116,7 @@ namespace Web
 
         protected void btnPlayLetter_Click(object sender, EventArgs e)
         {
-            string l = txtBoxLetter.Text;
+            string l = txtBoxLetter.Text.ToLower();
             if (l != null && l != "")
             {
                 if (ahlogic.ControlaLetraActual(Convert.ToChar(l)))
