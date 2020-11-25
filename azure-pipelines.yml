@@ -28,6 +28,8 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -48,7 +50,7 @@ steps:
     azureSubscription: 'Evaluación gratuita(9e9d503f-7c9a-498f-b637-2d73b6628d47)'
     appType: 'webApp'
     appName: 'AhorcadoGrupo04'
-    package: '$(build.artifactStagingDirectory)/**/*.*'
+    package: '$(build.artifactStagingDirectory)/*.zip'
     deploymentMethod: 'auto'
 
 - task: VSTest@2
