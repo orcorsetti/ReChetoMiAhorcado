@@ -36,6 +36,8 @@ steps:
     projectKey: 'orcorsetti_ReChetoMiAhorcado'
     projectName: 'ReChetoMiAhorcado'
 
+- task: SonarCloudAnalyze@1
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
