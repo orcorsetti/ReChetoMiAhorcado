@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <footer class="navbar fixed-bottom navbar-dark bg-secondary mt-auto">
+        <footer class="navbar navbar-dark bg-secondary mt-auto">
             <div class="container">
                 <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
                 <div class="card text-white bg-secondary" style="width: 18rem;">
