@@ -28,7 +28,7 @@
         </nav>
         <div class="container">
             <div class="row p-2 justify-content-center">
-                <div class="col-4">
+                <div class="col-5">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Tus Partidas:</h5>
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <footer class="navbar fixed-bottom navbar-dark bg-secondary">
+        <footer class="navbar fixed-bottom navbar-dark bg-secondary mt-auto">
             <div class="container">
                 <a class="navbar-brand lead" href="#">Metodologías Ágiles en Desarrollo de Software</a>
                 <div class="card text-white bg-secondary" style="width: 18rem;">
