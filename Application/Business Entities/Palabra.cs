@@ -12,7 +12,9 @@ namespace Business_Entities
         string[] PalabrasPosibles = {"chancleta", "salero", 
                                     "utensillo", "facultad", 
                                     "ahorcado", "universidad", 
-                                    "agilidad", "metodologia"};
+                                    "agilidad", "metodologia",
+                                    "microondas", "escalera",
+                                    "heladera", "telescopio"};
 
         private string _palabra;
         public string PalabraActual { get => _palabra; set => _palabra = value; }
