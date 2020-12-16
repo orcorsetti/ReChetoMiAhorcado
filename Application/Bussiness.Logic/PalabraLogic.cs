@@ -12,7 +12,7 @@ namespace Bussiness.Logic
     {
         public bool ControlaLargoPalabra(string PalabraActual)
         {
-            if (PalabraActual.Length >= 6)
+            if (PalabraActual.Length >= 8)
             {
                 return true;
             }
