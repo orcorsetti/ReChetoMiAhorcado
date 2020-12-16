@@ -28,7 +28,7 @@
         <div class="card-body">
         <h5 class="card-title"> Inicio de Sesión</h5>
                 <div class="row p-1">
-                    <label for="txtBoxUserName">Nombre de Usuario:</label>
+                    <label for="txtBoxUserName">Usuario:</label>
                     <asp:TextBox ID="txtBoxUserName" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="row p-1">
